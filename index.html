@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pregnancy Support System — R26-IT-146 | SLIIT Research</title>
+  <meta name="description" content="SLIIT final-year undergraduate research project R26-IT-146: an integrated AI-assisted Pregnancy Support System featuring CTG interpretation, maternal risk analytics, bilingual emotional support, and nutritional guidance for expectant mothers in Sri Lanka." />
+  <meta name="keywords" content="pregnancy support, CTG interpretation, maternal health, AI healthcare, SLIIT research, Sri Lanka, prenatal care" />
+  <meta property="og:title" content="Pregnancy Support System — SLIIT Research R26-IT-146" />
+  <meta property="og:description" content="Four integrated AI research components for maternal and clinical support: CTG analysis, risk classification, bilingual chatbot, and virtual nutritionist." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/site.css" />
+
+  <!-- SVG Favicon (inline logo mark) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%233D7A7A'/><path d='M16 8 C11 8 8 12 8 16 C8 20 11 22 14 23 L16 24 L18 23 C21 22 24 20 24 16 C24 12 21 8 16 8Z' fill='%23FAF8F5' opacity='0.9'/><circle cx='16' cy='14' r='3' fill='%236B8F71'/></svg>" />
+</head>
+<body>
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===================================================================
+       NAVIGATION
+  ==================================================================== -->
+  <header role="banner">
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#home" class="nav-logo" aria-label="Pregnancy Support System — Home">
+          <svg viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="18" cy="18" r="17" fill="#3D7A7A" />
+            <path d="M18 7 C12 7 8 12 8 17.5 C8 22 12 25 15.5 26.5 L18 27.5 L20.5 26.5 C24 25 28 22 28 17.5 C28 12 24 7 18 7Z" fill="#FAF8F5" opacity="0.92"/>
+            <ellipse cx="18" cy="16" rx="4" ry="4.5" fill="#6B8F71"/>
+            <circle cx="18" cy="25" r="2.5" fill="#E8A07A" opacity="0.7"/>
+          </svg>
+          <div class="nav-logo-text">
+            <span class="nav-logo-title">Pregnancy Support System</span>
+            <span class="nav-logo-sub">SLIIT · R26-IT-146</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-links" role="list">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#domain">Domain</a></li>
+          <li><a href="#milestones">Milestones</a></li>
+          <li><a href="#documents">Documents</a></li>
+          <li><a href="#presentations">Presentations</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Toggle -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#domain">Domain</a>
+      <a href="#milestones">Milestones</a>
+      <a href="#documents">Documents</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       MAIN CONTENT
+  ==================================================================== -->
+  <main id="main-content">
+
+    <!-- ================================================================
+         SECTION 1: HOME / HERO
+    ================================================================ -->
+    <section id="home" aria-labelledby="hero-heading">
+      <div class="hero">
+        <!-- Left: Content -->
+        <div class="hero-content reveal">
+          <div class="hero-eyebrow" aria-label="Project identifier">
+            <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+            SLIIT Undergraduate Research &nbsp;·&nbsp; R26-IT-146
+          </div>
+
+          <h1 id="hero-heading" class="hero-headline">
+            A more <em>connected</em> approach to maternal wellbeing.
+          </h1>
+
+          <p class="hero-desc">
+            Four integrated AI research modules work together to assist expectant mothers and clinicians across every dimension of prenatal care — from clinical CTG interpretation to emotional support, from real-time risk analytics to personalized nutritional guidance.
+          </p>
+
+          <div class="hero-disclaimer" role="note" aria-label="Research prototype disclaimer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Academic research prototype — not a validated clinical system.
+          </div>
+
+          <div class="hero-cta">
+            <a href="#domain" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Explore the Research
+            </a>
+            <a href="#app-showcase" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              View the Application
+            </a>
+          </div>
+
+          <!-- Quick Facts Strip -->
+          <div class="hero-stats" role="list" aria-label="Project quick facts">
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-value">4</div>
+              <div class="hero-stat-label">AI Research Modules</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-value">2</div>
+              <div class="hero-stat-label">User Roles</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-value" style="font-size:1rem;margin-top:3px;">R26-IT-146</div>
+              <div class="hero-stat-label">Project ID</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-value" style="font-size:1rem;margin-top:3px;">SLIIT</div>
+              <div class="hero-stat-label">Institution</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Phone Mockup -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-ring hero-ring-1"></div>
+          <div class="hero-ring hero-ring-2"></div>
+
+          <!-- Primary phone (Mother experience) -->
+          <div class="phone-mockup" role="img" aria-label="Conceptual mother-facing app dashboard design">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-screen-header">
+                <div class="phone-screen-title">Good morning, Priya 🌿</div>
+                <div class="phone-screen-sub">Week 28 · Today's Summary</div>
+              </div>
+              <div class="phone-metric-grid">
+                <div class="phone-metric-card">
+                  <div class="phone-metric-label">Heart Rate</div>
+                  <div class="phone-metric-value">84 <span class="phone-metric-unit">bpm</span></div>
+                </div>
+                <div class="phone-metric-card">
+                  <div class="phone-metric-label">Blood Pressure</div>
+                  <div class="phone-metric-value">118/76 <span class="phone-metric-unit">mmHg</span></div>
+                </div>
+                <div class="phone-metric-card">
+                  <div class="phone-metric-label">Blood Glucose</div>
+                  <div class="phone-metric-value">5.2 <span class="phone-metric-unit">mmol/L</span></div>
+                </div>
+                <div class="phone-metric-card">
+                  <div class="phone-metric-label">Gestational Age</div>
+                  <div class="phone-metric-value">28 <span class="phone-metric-unit">wks</span></div>
+                </div>
+              </div>
+              <div class="phone-risk-banner">
+                <div class="phone-risk-dot"></div>
+                <div class="phone-risk-text">Maternal Risk: <strong>LOW</strong> · All metrics stable</div>
+              </div>
+              <div class="phone-nav-bar">
+                <div class="phone-nav-icon"><span class="active"></span></div>
+                <div class="phone-nav-icon"><span></span></div>
+                <div class="phone-nav-icon"><span></span></div>
+                <div class="phone-nav-icon"><span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating secondary (Doctor) -->
+          <div class="phone-floater">
+            <div class="phone-floater-screen">
+              <div class="floater-badge">Doctor View</div>
+              <div style="font-size:1.5rem">🩺</div>
+              <div class="floater-title">Patient Alerts<br/>& CTG Review</div>
+              <div style="font-size:0.55rem;color:rgba(255,255,255,0.4);margin-top:4px">Clinician Dashboard</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- PROJECT OVERVIEW ---- -->
+      <div class="section section--alt" id="project-overview">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">Project Overview</div>
+            <h2>Reimagining prenatal care through connected AI research</h2>
+            <p class="section-lead">
+              The Pregnancy Support System is a SLIIT final-year undergraduate research project that investigates how four complementary AI technologies can improve the prenatal care experience for expectant mothers and their clinicians in Sri Lanka.
+            </p>
+          </div>
+
+          <div class="grid grid-2" style="gap: var(--space-12); align-items: center;">
+            <div class="reveal">
+              <img src="assets/images/hero-editorial.jpg"
+                   alt="A pregnant woman in a calm home setting, representing the research context of maternal wellbeing"
+                   style="border-radius: var(--radius-xl); width: 100%; object-fit: cover; max-height: 420px; box-shadow: var(--shadow-lg);"
+                   loading="lazy" />
+            </div>
+            <div class="reveal">
+              <h3 style="margin-bottom: var(--space-4);">The Challenge</h3>
+              <p>Prenatal care in Sri Lanka, as in many developing contexts, faces a critical challenge: the gap between periodic clinical visits and continuous, personalized maternal support. Expectant mothers often navigate complex health decisions without timely, accessible guidance.</p>
+              <p>CTG printouts go uninterpreted for days. Nutrition records are burdensome. Emotional health is under-monitored. Language barriers limit engagement with health information. And clinicians lack real-time integrated insight into patient wellbeing between appointments.</p>
+              <p>This research explores whether a cohesive AI-assisted mobile system — designed around actual maternal and clinical workflows — can meaningfully bridge these gaps.</p>
+              <div class="callout callout--info" style="margin-top: var(--space-6);">
+                <strong>Research Scope:</strong> This project is an academic research prototype. All findings, evaluations, and conclusions are preliminary. This system does not replace professional medical advice, clinical diagnosis, or emergency healthcare services.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- FOUR MODULES OVERVIEW ---- -->
+      <div class="section" id="components-overview">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">Four Research Components</div>
+            <h2>An integrated ecosystem of care</h2>
+            <p class="section-lead">
+              Each component is an independent research contribution, designed to function together as a coherent support system for mother and clinician.
+            </p>
+          </div>
+
+          <div class="grid grid-2 reveal" style="gap: var(--space-6);">
+            <!-- Component 01 -->
+            <article class="card component-card" data-component="1">
+              <div class="component-number">Component 01</div>
+              <div class="card-icon card-icon--teal" aria-hidden="true">📈</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-3);">AI-Assisted CTG Scan Interpretation</h3>
+              <p style="font-size:0.9rem;color:var(--charcoal-mid);">
+                Manual or photo-captured CTG data is processed through an AI pipeline to provide accessible, human-readable fetal wellbeing assessments — with full clinician review integration.
+              </p>
+              <div style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--gray-warm);">
+                Researcher: <strong>Thirimanne D.P.B.</strong> · IT22272386
+              </div>
+              <div class="component-badge badge-proposed">🔬 Proposed</div>
+              <a href="#component-01" class="btn btn-ghost btn-sm" style="margin-top: var(--space-4); text-decoration: none;">Read More →</a>
+            </article>
+
+            <!-- Component 02 -->
+            <article class="card component-card" data-component="2">
+              <div class="component-number">Component 02</div>
+              <div class="card-icon card-icon--sage" aria-hidden="true">❤️</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-3);">AI Maternal Health Analytics & Risk Classification</h3>
+              <p style="font-size:0.9rem;color:var(--charcoal-mid);">
+                Integrated biometric and symptom data feeds a four-tier maternal risk classification model with explainable AI, automated clinician alerts, and longitudinal health trend analysis.
+              </p>
+              <div style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--gray-warm);">
+                Researcher: <strong>Randinu P.V.K.V.</strong> · IT22557506
+              </div>
+              <div class="component-badge badge-proposed">🔬 Proposed</div>
+              <a href="#component-02" class="btn btn-ghost btn-sm" style="margin-top: var(--space-4); text-decoration: none;">Read More →</a>
+            </article>
+
+            <!-- Component 03 -->
+            <article class="card component-card" data-component="3">
+              <div class="component-number">Component 03</div>
+              <div class="card-icon card-icon--peach" aria-hidden="true">💬</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-3);">Bilingual AI Chatbot & Emotional Wellbeing</h3>
+              <p style="font-size:0.9rem;color:var(--charcoal-mid);">
+                A Sinhala-English conversational AI provides emotionally sensitive, culturally appropriate support — with sentiment analysis, mood context, and adaptive wellbeing recommendations.
+              </p>
+              <div style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--gray-warm);">
+                Researcher: <strong>Livera S.D.</strong> · IT22638168
+              </div>
+              <div class="component-badge badge-proposed">🔬 Proposed</div>
+              <a href="#component-03" class="btn btn-ghost btn-sm" style="margin-top: var(--space-4); text-decoration: none;">Read More →</a>
+            </article>
+
+            <!-- Component 04 -->
+            <article class="card component-card" data-component="4">
+              <div class="component-number">Component 04</div>
+              <div class="card-icon" style="background:#F0FBF0;color:#3A6440;" aria-hidden="true">🥗</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-3);">Multimodal Virtual Nutritionist & GDM Action Engine</h3>
+              <p style="font-size:0.9rem;color:var(--charcoal-mid);">
+                Voice-assisted logging, food image recognition, OCR for nutrition labels, pre-consumption GDM risk scoring, personalized Sri Lankan recipes, and gamified engagement — in Sinhala and English.
+              </p>
+              <div style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--gray-warm);">
+                Researcher: <strong>Nuwantha P.A.T.</strong> · IT22284716
+              </div>
+              <div class="component-badge badge-proposed">🔬 Proposed</div>
+              <a href="#component-04" class="btn btn-ghost btn-sm" style="margin-top: var(--space-4); text-decoration: none;">Read More →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- APP SHOWCASE ---- -->
+      <div class="section section--sage" id="app-showcase">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">Inside the Application</div>
+            <h2>Research brought to life</h2>
+            <p class="section-lead">
+              The following showcases conceptual application screens that represent the intended user experience across all four research modules. Real application screenshots will be added as development progresses.
+            </p>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <div class="tab-list" role="tablist" aria-label="Application views">
+              <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-mother" id="tab-btn-mother">Mother Experience</button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-doctor" id="tab-btn-doctor">Doctor Experience</button>
+            </div>
+
+            <!-- Mother Experience Tab -->
+            <div class="tab-panel active" id="tab-mother" role="tabpanel" aria-labelledby="tab-btn-mother">
+              <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6);">
+                <!-- CTG Screen -->
+                <div style="text-align: center;">
+                  <div class="screenshot-placeholder" style="max-width: 220px; margin: 0 auto; background: linear-gradient(160deg, #E8F4F4 0%, #D5EAE8 100%);">
+                    <div class="screenshot-placeholder-icon">📈</div>
+                    <div class="screenshot-placeholder-text">CTG Analysis</div>
+                    <div class="screenshot-placeholder-sub">Screenshot pending — Component 01</div>
+                  </div>
+                  <p style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--charcoal-mid); font-weight: 500;">CTG Scan Input &amp; Interpretation</p>
+                  <p style="font-size: 0.75rem; color: var(--gray-warm);">Photo capture or manual entry of CTG parameters with AI-assisted classification result.</p>
+                </div>
+
+                <!-- Risk Dashboard -->
+                <div style="text-align: center;">
+                  <div class="screenshot-placeholder" style="max-width: 220px; margin: 0 auto; background: linear-gradient(160deg, #EEF3EE 0%, #D8EAD8 100%);">
+                    <div class="screenshot-placeholder-icon">❤️</div>
+                    <div class="screenshot-placeholder-text">Risk Dashboard</div>
+                    <div class="screenshot-placeholder-sub">Screenshot pending — Component 02</div>
+                  </div>
+                  <p style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--charcoal-mid); font-weight: 500;">Maternal Risk Overview</p>
+                  <p style="font-size: 0.75rem; color: var(--gray-warm);">Four-tier risk level display with metric contributions and trend visualization.</p>
+                </div>
+
+                <!-- Chatbot Screen -->
+                <div style="text-align: center;">
+                  <div class="screenshot-placeholder" style="max-width: 220px; margin: 0 auto; background: linear-gradient(160deg, #FDF5F2 0%, #F5E0D8 100%);">
+                    <div class="screenshot-placeholder-icon">💬</div>
+                    <div class="screenshot-placeholder-text">Wellness Chatbot</div>
+                    <div class="screenshot-placeholder-sub">Screenshot pending — Component 03</div>
+                  </div>
+                  <p style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--charcoal-mid); font-weight: 500;">Bilingual Emotional Support</p>
+                  <p style="font-size: 0.75rem; color: var(--gray-warm);">Sinhala-English conversational AI with mood-adaptive responses and calming suggestions.</p>
+                </div>
+
+                <!-- Nutrition Screen -->
+                <div style="text-align: center;">
+                  <div class="screenshot-placeholder" style="max-width: 220px; margin: 0 auto; background: linear-gradient(160deg, #F0FBF0 0%, #D8EFD8 100%);">
+                    <div class="screenshot-placeholder-icon">🥗</div>
+                    <div class="screenshot-placeholder-text">Nutrition Tracker</div>
+                    <div class="screenshot-placeholder-sub">Screenshot pending — Component 04</div>
+                  </div>
+                  <p style="margin-top: var(--space-3); font-size: 0.82rem; color: var(--charcoal-mid); font-weight: 500;">Virtual Nutritionist</p>
+                  <p style="font-size: 0.75rem; color: var(--gray-warm);">Multimodal food logging with GDM risk scoring and personalized Sri Lankan recipe suggestions.</p>
+                </div>
+              </div>
+              <div class="callout callout--info" style="margin-top: var(--space-8);">
+                <strong>📌 Note for the team:</strong> Add real app screenshots to <code>assets/screenshots/</code> and update the <code>src</code> attributes in the HTML. See <a href="README.md">README.md</a> for instructions.
+              </div>
+            </div>
+
+            <!-- Doctor Experience Tab -->
+            <div class="tab-panel" id="tab-doctor" role="tabpanel" aria-labelledby="tab-btn-doctor">
+              <div class="grid grid-2" style="gap: var(--space-8); align-items: center;">
+                <div>
+                  <div class="screenshot-placeholder" style="max-height: 400px; background: linear-gradient(160deg, #EEF3EE 0%, #D0E5D0 100%);">
+                    <div class="screenshot-placeholder-icon">🩺</div>
+                    <div class="screenshot-placeholder-text">Doctor Dashboard</div>
+                    <div class="screenshot-placeholder-sub">Screenshot pending — Clinician view</div>
+                  </div>
+                </div>
+                <div>
+                  <h3>Clinician-Facing Features</h3>
+                  <p style="color: var(--charcoal-mid);">The doctor-facing module is designed to reduce clinical burden by surfacing relevant patient data proactively, enabling review and response without requiring patients to attend clinic.</p>
+                  <div class="feature-list">
+                    <div class="feature-item">
+                      <div class="feature-bullet"></div>
+                      <div class="feature-text">Patient CTG submission review with AI classification context</div>
+                    </div>
+                    <div class="feature-item">
+                      <div class="feature-bullet"></div>
+                      <div class="feature-text">Automated alerts for HIGH / VERY HIGH maternal risk classifications</div>
+                    </div>
+                    <div class="feature-item">
+                      <div class="feature-bullet"></div>
+                      <div class="feature-text">Longitudinal health trend visualization per patient</div>
+                    </div>
+                    <div class="feature-item">
+                      <div class="feature-bullet"></div>
+                      <div class="feature-text">Annotate CTG results and send clinical feedback to patient</div>
+                    </div>
+                    <div class="feature-item">
+                      <div class="feature-bullet"></div>
+                      <div class="feature-text">Multi-patient overview with priority queue</div>
+                    </div>
+                  </div>
+                  <div class="evidence-label evidence-proposed" style="margin-top: var(--space-5);">🔬 Proposed Features</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How the ecosystem works -->
+      <div class="section">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">System Integration</div>
+            <h2>How the ecosystem works together</h2>
+          </div>
+          <div class="arch-diagram reveal">
+            <p style="text-align:center; font-size:0.75rem; color:var(--gray-warm); margin-bottom:var(--space-6);">
+              ⚠️ Conceptual research architecture — integration design subject to revision during implementation
+            </p>
+            <div class="arch-grid">
+              <!-- Left: User inputs -->
+              <div class="arch-column">
+                <div class="arch-node arch-node--mother">
+                  <div class="arch-node-icon">👩</div>
+                  <div class="arch-node-label">Expectant Mother</div>
+                  <div class="arch-node-sub">Mobile App (Flutter / React Native)</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">📈 CTG Input</div>
+                  </div>
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">❤️ Health Metrics</div>
+                  </div>
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">💬 Chat / Mood</div>
+                  </div>
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">🥗 Food Log</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Center: AI Hub -->
+              <div class="arch-center">
+                <div class="arch-arrow">→</div>
+                <div class="arch-center-hub">
+                  <div style="font-size:1.4rem">🧠</div>
+                  <div class="arch-center-label">AI Processing Hub</div>
+                  <div style="font-size:0.58rem;color:var(--gray-warm);margin-top:2px;">Python ML Backend</div>
+                </div>
+                <div class="arch-arrow">→</div>
+              </div>
+
+              <!-- Right: Outputs -->
+              <div class="arch-column">
+                <div class="arch-node arch-node--doctor">
+                  <div class="arch-node-icon">🩺</div>
+                  <div class="arch-node-label">Clinician</div>
+                  <div class="arch-node-sub">Doctor Dashboard</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">CTG Risk Report</div>
+                  </div>
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">Risk Alert (FCM)</div>
+                  </div>
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">Wellbeing Insights</div>
+                  </div>
+                  <div class="arch-node arch-node--component">
+                    <div class="arch-node-label" style="font-size:0.72rem;">Nutrition Guidance</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 2: DOMAIN
+    ================================================================ -->
+    <section id="domain" aria-labelledby="domain-heading">
+      <!-- Sticky sub-nav -->
+      <nav class="domain-nav" aria-label="Domain subsections">
+        <div class="domain-nav-inner">
+          <a href="#lit-survey" class="domain-nav-link">Literature Survey</a>
+          <a href="#research-gap" class="domain-nav-link">Research Gap</a>
+          <a href="#research-problem" class="domain-nav-link">Research Problem</a>
+          <a href="#objectives" class="domain-nav-link">Objectives</a>
+          <a href="#methodology" class="domain-nav-link">Methodology</a>
+          <a href="#technologies" class="domain-nav-link">Technologies</a>
+          <a href="#components" class="domain-nav-link">Components</a>
+        </div>
+      </nav>
+
+      <div class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Domain</div>
+            <h2 id="domain-heading">Research Context &amp; Academic Foundation</h2>
+            <p class="section-lead">A comprehensive review of the research landscape, problem definition, objectives, and methodological approach underpinning the Pregnancy Support System.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LITERATURE SURVEY -->
+      <div class="section section--alt" id="lit-survey">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Literature Survey</div>
+            <h2>Background &amp; Prior Research</h2>
+          </div>
+
+          <div class="grid grid-2" style="gap: var(--space-8);">
+            <div>
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-4);">CTG Analysis &amp; AI Interpretation</h3>
+              <p>Cardiotocography (CTG) is the standard clinical tool for assessing fetal wellbeing during the antenatal period. Traditional CTG interpretation is highly subjective and dependent on expert knowledge, with reported inter-observer variability as a recognized clinical concern. Research into AI-assisted CTG interpretation has explored image-based classification using convolutional neural networks and signal-based feature extraction using classical machine learning models. Studies utilizing the CTU-CHB Intrapartum CTG dataset have demonstrated that ensemble and deep learning approaches can achieve competitive classification performance for fetal states. Key limitations in the literature include reliance on structured signal input and limited work on consumer-grade photograph digitization of printed CTG graphs — a practical scenario in low-resource healthcare settings.</p>
+
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-4); margin-top: var(--space-6);">Maternal Risk Classification &amp; Monitoring</h3>
+              <p>The classification of maternal health risk during pregnancy has been approached through both population-level statistical models and individual real-time machine learning classifiers. Research has demonstrated the utility of combining biometric parameters — including blood pressure, heart rate, blood glucose and gestational age — into a unified risk score. Random Forest, XGBoost and Support Vector Machine models have been applied to maternal health datasets (including the UCI Maternal Health Risk Dataset) with accuracy metrics reported in the 85–92% range in published literature. Explainability of ML predictions through SHAP (SHapley Additive exPlanations) values has emerged as a critical design principle to maintain clinician trust in AI-generated risk assessments.</p>
+            </div>
+            <div>
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-4);">Conversational AI &amp; Emotional Wellbeing</h3>
+              <p>Prenatal mental health is significantly underserved in many healthcare systems. Studies indicate that antenatal depression affects a substantial proportion of expectant mothers, yet is rarely screened for in clinical settings. Conversational AI systems, particularly transformer-based chatbots, have been explored as accessible first-line emotional support tools. Sentiment analysis and affective computing research has demonstrated the feasibility of detecting emotional states from text and, with greater uncertainty, from facial expressions. Responsible AI design for emotional contexts requires clear system limitations disclosures, avoiding diagnostic claims, and maintaining user trust through transparency. Bilingual NLP for under-resourced languages such as Sinhala presents additional complexity, with transfer learning from multilingual models (XLM-R, mBERT) showing promising results.</p>
+
+              <h3 style="font-size: 1.2rem; margin-bottom: var(--space-4); margin-top: var(--space-6);">Prenatal Nutrition, GDM Management &amp; Food Recognition</h3>
+              <p>Gestational Diabetes Mellitus (GDM) affects a significant proportion of pregnancies globally and is associated with adverse maternal and neonatal outcomes. Dietary management, particularly glycemic load control, is a first-line intervention. Mobile technology has been explored as a tool for dietary self-monitoring, with research demonstrating improved compliance with dietary goals when food logging friction is reduced. YOLOv8 and predecessor architectures have achieved state-of-the-art performance in food detection tasks. Nutrition label OCR using established OCR frameworks has been applied to automated food database population. The cultural specificity of Sri Lankan dietary patterns — including rice-based staples and unique spice/herb profiles — necessitates a localized food recognition and nutrition database approach beyond standard Western-oriented food APIs.</p>
+            </div>
+          </div>
+
+          <div class="callout callout--info" style="margin-top: var(--space-8);">
+            <strong>Note:</strong> This literature synthesis is derived from the submitted research proposals (R26-IT-146, 2024–2025). Full references are drawn from the individual component proposals. Specific citation details for any claim should be verified against the source proposals before publication.
+          </div>
+
+          <!-- Selected References -->
+          <details style="margin-top: var(--space-8);">
+            <summary style="cursor:pointer; font-weight:600; color: var(--teal-deep); font-size:0.95rem; padding: var(--space-3) 0; border-top: 1px solid var(--gray-border);">
+              View Selected References (from research proposals)
+            </summary>
+            <div class="references-list" style="margin-top: var(--space-4);">
+              <div class="reference-item">Ayres-de-Campos, D., et al. (2015). FIGO consensus guidelines on intrapartum fetal monitoring: Cardiotocography. International Journal of Gynecology & Obstetrics, 131(1), 13–24.</div>
+              <div class="reference-item">Ahmed, M., et al. (2020). Machine Learning-Based Maternal Health Risk Prediction. UCI Machine Learning Repository — Maternal Health Risk Data Set. [Cited in Component 02 proposal]</div>
+              <div class="reference-item">Redmon, J., & Farhadi, A. (2018). YOLOv3: An Incremental Improvement. arXiv:1804.02767. [Referenced in Component 04 proposal]</div>
+              <div class="reference-item">Conneau, A., et al. (2020). Unsupervised Cross-lingual Representation Learning at Scale. ACL 2020. [Relevant to Component 03 Sinhala NLP approach]</div>
+              <div class="reference-item">WHO (2016). WHO recommendations on antenatal care for a positive pregnancy experience. Geneva: World Health Organization.</div>
+              <div class="reference-item">American Diabetes Association. (2023). Standards of Care in Diabetes — Gestational Diabetes Mellitus. Diabetes Care, 46 (Suppl. 1).</div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- RESEARCH GAP -->
+      <div class="section" id="research-gap">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Research Gap</div>
+            <h2>Identified Gaps in Existing Literature &amp; Practice</h2>
+            <p class="section-lead">The following gaps are observed from a review of existing literature and local healthcare context, as articulated in the component research proposals. These are observations, not universal scientifically validated claims.</p>
+          </div>
+
+          <div style="overflow-x: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+            <table class="gap-table" aria-label="Research gap analysis across four components">
+              <thead>
+                <tr>
+                  <th>Gap Area</th>
+                  <th>Existing Solutions</th>
+                  <th>This Research's Contribution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CTG Interpretation Accessibility</strong><br/><span style="font-size:0.78rem;color:var(--gray-warm);">Component 01</span></td>
+                  <td>Existing AI CTG tools require structured digital signal input. Consumer-grade photograph input of printed CTG graphs is understudied. Doctor review integration and shared result history are rarely combined in a single mobile-accessible tool.</td>
+                  <td>Proposed pipeline combining photo-based CTG digitization, AI classification (Normal / Mild / High Risk), and bidirectional doctor review — accessible on consumer mobile hardware without clinical-grade signal hardware.</td>
+                </tr>
+                <tr>
+                  <td><strong>Combined Risk Classification + Explainability + Alerts</strong><br/><span style="font-size:0.78rem;color:var(--gray-warm);">Component 02</span></td>
+                  <td>Existing maternal risk tools often operate on single metrics or lack explainability layers. Automated real-time doctor notification when thresholds are crossed is not a standard feature in academic prototype systems.</td>
+                  <td>A four-tier (LOW/MEDIUM/HIGH/VERY HIGH) combined risk classifier using multiple biometrics + CTG output, SHAP-based explanation per patient, and automated FCM notification to clinician — proposed as a unified subsystem.</td>
+                </tr>
+                <tr>
+                  <td><strong>Culturally Appropriate Bilingual Emotional Support</strong><br/><span style="font-size:0.78rem;color:var(--gray-warm);">Component 03</span></td>
+                  <td>Most AI chatbot wellbeing tools are English-only. Sinhala NLP resources are limited. Emotional support tools rarely combine sentiment analysis with adaptive response generation and mood context. Privacy-preserving on-device processing for mood inference is an emerging research area.</td>
+                  <td>A Sinhala-English chatbot with NLP-based sentiment analysis, optional opt-in mood context (with user-controlled camera access), calming content recommendations, and offline-capable chat history — grounded in responsible AI and privacy principles.</td>
+                </tr>
+                <tr>
+                  <td><strong>Multimodal Sri Lankan Dietary Support + GDM Guidance</strong><br/><span style="font-size:0.78rem;color:var(--gray-warm);">Component 04</span></td>
+                  <td>General food logging apps lack Sri Lankan food databases. GDM-specific dietary guidance in local context is not available in mobile form. Pre-consumption glycemic load estimation before a meal is eaten is an understudied approach. Combined voice, image and OCR food logging reduces entry friction in ways not addressed by existing apps.</td>
+                  <td>YOLOv8-based Sri Lankan food recognition, nutrition label OCR, pre-consumption GDM risk scoring using Glycemic Load + maternal glucose context, "Virtual Chef" recipe generation, Sinhala voice logging, and gamified engagement — proposed as an integrated nutritional support system.</td>
+                </tr>
+                <tr>
+                  <td><strong>Integrated Cross-Component System</strong><br/><span style="font-size:0.78rem;color:var(--gray-warm);">All Components</span></td>
+                  <td>Existing research tends to address maternal health challenges in isolation — either nutrition OR mental health OR monitoring OR CTG analysis. Cross-component data sharing (e.g. CTG risk informing overall maternal risk; nutritional context informing risk profile) is rare in academic prototypes.</td>
+                  <td>A coordinated four-component system where CTG analysis informs maternal risk profiling; risk levels inform clinician alerting; emotional wellbeing provides a complementary pathway; and the nutritional module uses risk and mood context for individualized guidance.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH PROBLEM -->
+      <div class="section section--blush" id="research-problem">
+        <div class="container container--text" style="max-width: 860px;">
+          <div class="section-header">
+            <div class="section-eyebrow">Research Problem</div>
+            <h2>The Problem We Are Investigating</h2>
+          </div>
+          <p style="font-size: 1.05rem; line-height: 1.9;">
+            Expectant mothers in Sri Lanka, as in many developing healthcare contexts, face a fragmented prenatal care experience. The standard model of periodic clinical visits creates significant gaps in continuity of care, during which changes in maternal health status — whether in biometrics, fetal activity, emotional wellbeing, or dietary adherence — may go undetected or unaddressed until the next scheduled appointment.
+          </p>
+          <div class="grid grid-2" style="gap: var(--space-6); margin-top: var(--space-8);">
+            <div class="card card--sage">
+              <div class="card-icon card-icon--teal">🩺</div>
+              <h4>Clinical Gaps</h4>
+              <p style="font-size:0.88rem;color:var(--charcoal-mid);">CTG printouts may remain uninterpreted between visits. Doctors lack real-time insight into patient biometrics and symptom progression outside clinical appointments. There is no standardized digital channel for patients to flag concerns and receive timely, clinically appropriate responses.</p>
+            </div>
+            <div class="card card--sage">
+              <div class="card-icon card-icon--sage">💬</div>
+              <h4>Support Gaps</h4>
+              <p style="font-size:0.88rem;color:var(--charcoal-mid);">Emotional health during pregnancy is significantly under-monitored. Language barriers limit engagement with health information for Sinhala-speaking mothers. Culturally appropriate, accessible mental wellbeing resources are scarce in digital form.</p>
+            </div>
+            <div class="card card--sage">
+              <div class="card-icon card-icon--peach">🥗</div>
+              <h4>Nutrition Gaps</h4>
+              <p style="font-size:0.88rem;color:var(--charcoal-mid);">Dietary recording is burdensome and non-compliant in practice. GDM-specific dietary guidance is not available in mobile form for the Sri Lankan dietary context. Pre-consumption risk awareness for high-glycemic-index foods is not commonly offered to at-risk mothers.</p>
+            </div>
+            <div class="card card--sage">
+              <div class="card-icon" style="background:#F0FBF0;color:#3A6440;">📱</div>
+              <h4>Technology Gaps</h4>
+              <p style="font-size:0.88rem;color:var(--charcoal-mid);">Existing health apps do not integrate CTG data, biometric risk, emotional wellbeing, and nutritional context into a single coherent system. There is no cross-validated mobile tool designed for the Sri Lankan prenatal care context that addresses all four dimensions simultaneously.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH OBJECTIVES -->
+      <div class="section" id="objectives">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">Research Objectives</div>
+            <h2>What This Research Sets Out to Achieve</h2>
+          </div>
+
+          <!-- Main Objective -->
+          <div class="card" style="border-left: 4px solid var(--teal); border-radius: var(--radius-lg); margin-bottom: var(--space-8); max-width: 800px; margin-left: auto; margin-right: auto; background: var(--teal-50);">
+            <h4 style="color: var(--teal-deep); margin-bottom: var(--space-3);">Overall Research Objective</h4>
+            <p>To design, develop and evaluate an integrated AI-assisted mobile support system for expectant mothers and clinicians in Sri Lanka, encompassing CTG-based fetal wellbeing assessment, maternal health risk classification, bilingual emotional wellbeing support, and personalized nutritional guidance — with the aim of improving continuity of prenatal care and reducing clinician workload through intelligent automation and timely communication.</p>
+          </div>
+
+          <!-- Component Objectives -->
+          <div class="grid grid-2" style="gap: var(--space-6);">
+            <div class="card">
+              <div class="component-number">Component 01 Objectives</div>
+              <h4 style="margin-bottom: var(--space-4);">CTG Scan Interpretation</h4>
+              <ul style="display:flex;flex-direction:column;gap:var(--space-3);">
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Develop a pipeline for digitizing consumer-photograph CTG graphs into structured signal data using OpenCV preprocessing</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Train and evaluate ML/DL classifiers to categorize CTG input as Normal, Mild Risk, or High Risk</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Design a doctor review and annotated feedback flow accessible within the mobile application</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Evaluate classification accuracy and usability of CTG result presentation <span class="evidence-label evidence-target" style="font-size:0.65rem;padding:1px 6px;">🎯 Proposed Target: >90% accuracy</span></div></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="component-number">Component 02 Objectives</div>
+              <h4 style="margin-bottom: var(--space-4);">Maternal Risk Classification</h4>
+              <ul style="display:flex;flex-direction:column;gap:var(--space-3);">
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Build a multi-input maternal risk classifier (LOW/MEDIUM/HIGH/VERY HIGH) using RF, XGBoost and SVM model comparison</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Implement SHAP-based explainability to surface the key contributing metrics for each risk classification</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Develop an automated push-notification alert (FCM) to clinicians when HIGH or VERY HIGH risk is detected</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Create a longitudinal baseline tracking system for individual maternal health deviation monitoring</div></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="component-number">Component 03 Objectives</div>
+              <h4 style="margin-bottom: var(--space-4);">Bilingual Chatbot & Wellbeing</h4>
+              <ul style="display:flex;flex-direction:column;gap:var(--space-3);">
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Develop a Sinhala-English conversational AI providing culturally appropriate prenatal emotional support</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Implement NLP-based sentiment analysis to adapt chatbot tone and content to inferred emotional state</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Investigate optional, opt-in on-device facial expression analysis for supplementary mood context — with full user consent and local processing</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Evaluate user-perceived emotional appropriateness, language accuracy and privacy comfort of the system</div></li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="component-number">Component 04 Objectives</div>
+              <h4 style="margin-bottom: var(--space-4);">Virtual Nutritionist & GDM Engine</h4>
+              <ul style="display:flex;flex-direction:column;gap:var(--space-3);">
+                <li class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text">Develop a multimodal food logging system using voice input, image recognition (YOLOv8) and nutrition label OCR</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text">Build a pre-consumption GDM risk scoring model incorporating Glycemic Load and maternal glucose context</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text">Create a "Virtual Chef" recipe generator using Gemini API, personalized to available ingredients and nutritional goals</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text">Implement gamification mechanics to improve dietary self-monitoring compliance and user engagement</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- METHODOLOGY -->
+      <div class="section section--sage" id="methodology">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">Methodology</div>
+            <h2>Research Approach &amp; Development Process</h2>
+            <p class="section-lead">The project follows a Design Science Research (DSR) methodology, adapted for multi-component AI healthcare system development.</p>
+          </div>
+
+          <div class="methodology-steps reveal">
+            <div class="method-step">
+              <h4>1. Problem Identification &amp; Literature Review</h4>
+              <p>Formal articulation of prenatal care gaps in the Sri Lankan context; systematic review of CTG AI, risk classification, NLP and nutrition AI literature; identification of research opportunities and ethical constraints.</p>
+            </div>
+            <div class="method-step">
+              <h4>2. Requirements &amp; Dataset Analysis</h4>
+              <p>Elicitation of functional and non-functional requirements from literature and target user context; identification of relevant datasets (UCI Maternal Risk, CTU-CHB CTG, custom food databases); assessment of existing mobile health UX patterns.</p>
+            </div>
+            <div class="method-step">
+              <h4>3. System Design</h4>
+              <p>Architecture design for the four-component system and their data interfaces; UI/UX wireframing for mother and doctor experiences; data schema design; proposed privacy-by-design and consent frameworks per component.</p>
+            </div>
+            <div class="method-step">
+              <h4>4. AI Model Development &amp; Training</h4>
+              <p>Data preprocessing, feature engineering and model training per component; CTG image processing pipeline; multi-class risk classifier training and comparison; NLP model selection and fine-tuning for bilingual support; YOLOv8 fine-tuning for local food recognition.</p>
+            </div>
+            <div class="method-step">
+              <h4>5. Mobile Application Implementation</h4>
+              <p>Frontend mobile application development integrating all four modules; API development connecting ML backends to mobile frontends; push notification integration (FCM); authentication and data management (Firebase Firestore).</p>
+            </div>
+            <div class="method-step">
+              <h4>6. Evaluation &amp; Validation</h4>
+              <p>Model evaluation: accuracy, precision, recall, F1 per component; system usability evaluation (SUS) with relevant user groups; ethical review of data handling practices; comparison against proposed targets. All evaluation is academic research evaluation, not clinical validation.</p>
+            </div>
+          </div>
+
+          <div class="callout callout--ethics" style="margin-top: var(--space-8);">
+            <strong>Ethics &amp; Responsible AI:</strong> All data collection proposed in this research will require informed participant consent. Identifiable health data will be anonymized. The optional facial expression mood inference feature (Component 03) requires explicit affirmative opt-in per session, a visible active-camera indicator during use, and simple one-tap disable. Processing is proposed to occur on-device. No participant health records are reproduced in this website. Proposed ethics review will be sought through institutional channels before data collection — ethics approval has not yet been granted.
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNOLOGIES USED -->
+      <div class="section" id="technologies">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Technologies Used</div>
+            <h2>Proposed &amp; Verified Technology Stack</h2>
+            <p class="section-lead">Technologies are listed per research component. Items are classified as <span class="evidence-label evidence-proposed" style="font-size:0.68rem;">🔬 Proposed</span> unless verified by actual implementation code or screenshots.</p>
+          </div>
+
+          <div class="grid grid-2" style="gap: var(--space-8);">
+            <!-- Component 01 -->
+            <div>
+              <h4 style="margin-bottom: var(--space-4); padding-bottom: var(--space-3); border-bottom: 2px solid var(--teal);">Component 01 — CTG Interpretation</h4>
+              <div class="tech-group">
+                <div class="tech-group-title">Image Processing</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">OpenCV</span>
+                  <span class="tech-badge tech-badge--proposed">Python 3.x</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">ML / Classification</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">TensorFlow / Keras</span>
+                  <span class="tech-badge tech-badge--proposed">scikit-learn</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">Mobile Integration</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Flutter</span>
+                  <span class="tech-badge tech-badge--proposed">Firebase FCM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Component 02 -->
+            <div>
+              <h4 style="margin-bottom: var(--space-4); padding-bottom: var(--space-3); border-bottom: 2px solid var(--sage);">Component 02 — Risk Classification</h4>
+              <div class="tech-group">
+                <div class="tech-group-title">ML Models</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Random Forest</span>
+                  <span class="tech-badge tech-badge--proposed">XGBoost</span>
+                  <span class="tech-badge tech-badge--proposed">SVM</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">Explainability</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">SHAP</span>
+                  <span class="tech-badge tech-badge--proposed">Python / scikit-learn</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">Backend / Notification</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Firebase Firestore</span>
+                  <span class="tech-badge tech-badge--proposed">Firebase FCM</span>
+                  <span class="tech-badge tech-badge--proposed">Flask / FastAPI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Component 03 -->
+            <div>
+              <h4 style="margin-bottom: var(--space-4); padding-bottom: var(--space-3); border-bottom: 2px solid var(--peach);">Component 03 — Chatbot &amp; Wellbeing</h4>
+              <div class="tech-group">
+                <div class="tech-group-title">Mobile Framework</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">React Native (Expo)</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">NLP / On-device AI</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">TensorFlow Lite</span>
+                  <span class="tech-badge tech-badge--proposed">MobileNetV2</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">Backend</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Node.js / Express</span>
+                  <span class="tech-badge tech-badge--proposed">Firebase</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Component 04 -->
+            <div>
+              <h4 style="margin-bottom: var(--space-4); padding-bottom: var(--space-3); border-bottom: 2px solid #5B8A5B;">Component 04 — Virtual Nutritionist</h4>
+              <div class="tech-group">
+                <div class="tech-group-title">Mobile / AI Vision</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Flutter</span>
+                  <span class="tech-badge tech-badge--proposed">YOLOv8</span>
+                  <span class="tech-badge tech-badge--proposed">OCR Engine</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">Backend / AI</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Python FastAPI</span>
+                  <span class="tech-badge tech-badge--proposed">Google Gemini API</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <div class="tech-group-title">Data</div>
+                <div class="tech-badges">
+                  <span class="tech-badge tech-badge--proposed">Firebase Firestore</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout--warning" style="margin-top: var(--space-6);">
+            <strong>⚠️ Stack note:</strong> Component 03 references React Native (Expo) while Components 01 and 04 reference Flutter. These may represent separate technical approaches per component or may be unified during integration. The final production stack will be confirmed during implementation. Technologies listed here are proposed research stacks from individual proposals.
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPONENTS DEEP DIVE -->
+      <div class="section section--alt" id="components">
+        <div class="container">
+          <div class="section-header center">
+            <div class="section-eyebrow">Component Detail</div>
+            <h2>In-depth Research Contributions</h2>
+          </div>
+
+          <!-- Component 01 -->
+          <div class="component-detail" id="component-01">
+            <div class="component-detail-text">
+              <div class="component-number" style="color:var(--teal);">COMPONENT 01</div>
+              <h3 style="margin-bottom: var(--space-3);">AI-Assisted CTG Scan Interpretation</h3>
+              <div style="margin-bottom: var(--space-3);">
+                <span style="font-size:0.82rem;color:var(--gray-warm);">Researcher: </span>
+                <strong style="font-size:0.9rem;">Thirimanne D.P.B.</strong>
+                <span style="font-size:0.82rem;color:var(--gray-warm);"> · IT22272386</span>
+              </div>
+              <p>This component addresses the accessibility gap in CTG (cardiotocography) interpretation. Standard CTG monitoring is a cornerstone of antenatal care, yet the resulting printouts frequently require specialist interpretation that is not immediately available — particularly in settings where patients travel home with printed reports.</p>
+              <p>The proposed system allows a mother to photograph a printed CTG graph using their smartphone camera, or to manually enter key CTG parameters. An image preprocessing pipeline (OpenCV-based) extracts the fetal heart rate trace and uterine contraction pattern from the photograph, enabling AI-based classification.</p>
+
+              <h4 style="margin-top:var(--space-5); margin-bottom:var(--space-3);">Research Highlights</h4>
+              <div class="feature-list">
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Photo-based CTG digitization using image preprocessing — under-studied in mobile health research</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Three-tier classification: <strong>Normal / Mild Risk / High Risk</strong> (distinct from Component 02's four-tier maternal risk)</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Feature extraction: FHR baseline, variability, accelerations, decelerations, uterine contractions</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">Doctor review workflow: annotate, correct or confirm AI result; add clinical notes</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--teal)"></div><div class="feature-text">CTG history accessible to both mother and assigned clinician</div></div>
+              </div>
+              <div class="evidence-label evidence-proposed" style="margin-top: var(--space-5);">🔬 Proposed / Under Development</div>
+              <div class="callout callout--medical" style="margin-top: var(--space-5);">
+                This component provides clinical decision <strong>support</strong>, not autonomous fetal diagnosis. All AI outputs require clinician review before clinical action is taken.
+              </div>
+            </div>
+            <div class="component-detail-visual">
+              <h5 style="margin-bottom: var(--space-4);">Proposed CTG Analysis Pipeline</h5>
+              <div class="pipeline">
+                <div class="pipeline-step"><div class="pipeline-step-num">1</div><div class="pipeline-step-label">Image Capture / Manual Entry<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Smartphone camera photo of CTG printout OR manual parameter input</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num">2</div><div class="pipeline-step-label">Image Preprocessing<br/><span style="font-size:0.75rem;color:var(--gray-warm);">OpenCV: noise reduction, trace extraction, feature detection</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num">3</div><div class="pipeline-step-label">Feature Extraction<br/><span style="font-size:0.75rem;color:var(--gray-warm);">FHR baseline, variability, accelerations, decelerations, UC frequency</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num">4</div><div class="pipeline-step-label">AI Classification<br/><span style="font-size:0.75rem;color:var(--gray-warm);">TensorFlow / scikit-learn model → Normal / Mild Risk / High Risk</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num">5</div><div class="pipeline-step-label">Human-readable Result<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Presented to mother with appropriate health messaging; stored in history</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num">6</div><div class="pipeline-step-label">Clinician Review &amp; Feedback<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Doctor reviews, confirms/corrects; annotated result returned to patient</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Component 02 -->
+          <div class="component-detail" id="component-02" style="border-top: 1px solid var(--gray-border); padding-top: var(--space-10);">
+            <div class="component-detail-text">
+              <div class="component-number" style="color:var(--sage-dark);">COMPONENT 02</div>
+              <h3 style="margin-bottom: var(--space-3);">AI Maternal Health Analytics &amp; Risk Classification</h3>
+              <div style="margin-bottom: var(--space-3);">
+                <span style="font-size:0.82rem;color:var(--gray-warm);">Researcher: </span>
+                <strong style="font-size:0.9rem;">Randinu P.V.K.V.</strong>
+                <span style="font-size:0.82rem;color:var(--gray-warm);"> · IT22557506</span>
+              </div>
+              <p>This component integrates multiple maternal health inputs — including heart rate, blood pressure, blood glucose, gestational age, and the CTG risk output from Component 01 — into a unified four-tier maternal risk classification system. The goal is to provide clinicians and mothers with a continuously updated, explainable risk picture that bridges the gap between clinical visits.</p>
+              <p>The system proposes a daily individualized symptom questionnaire covering fetal movement, pain levels, sleep quality, oedema and general wellbeing. Responses are combined with biometrics to detect deviations from each patient's established personal baseline — enabling early detection of concerning trends before they reach clinical threshold.</p>
+
+              <h4 style="margin-top:var(--space-5); margin-bottom:var(--space-3);">Four-Tier Risk Classification</h4>
+              <div style="display:flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4);">
+                <div style="flex:1;min-width:100px;padding:var(--space-3);background:#ECFDF5;border-radius:var(--radius-md);text-align:center;border:1px solid #A7F3D0;">
+                  <div style="font-weight:700;color:#065F46;font-size:0.85rem;">LOW</div>
+                  <div style="font-size:0.7rem;color:#6B7280;">All metrics stable</div>
+                </div>
+                <div style="flex:1;min-width:100px;padding:var(--space-3);background:#FFF7ED;border-radius:var(--radius-md);text-align:center;border:1px solid #FED7AA;">
+                  <div style="font-weight:700;color:#C2410C;font-size:0.85rem;">MEDIUM</div>
+                  <div style="font-size:0.7rem;color:#6B7280;">Monitor closely</div>
+                </div>
+                <div style="flex:1;min-width:100px;padding:var(--space-3);background:#FEF2F2;border-radius:var(--radius-md);text-align:center;border:1px solid #FCA5A5;">
+                  <div style="font-weight:700;color:#991B1B;font-size:0.85rem;">HIGH</div>
+                  <div style="font-size:0.7rem;color:#6B7280;">Doctor alerted</div>
+                </div>
+                <div style="flex:1;min-width:100px;padding:var(--space-3);background:#450A0A;border-radius:var(--radius-md);text-align:center;border:1px solid #7F1D1D;">
+                  <div style="font-weight:700;color:#FEE2E2;font-size:0.85rem;">VERY HIGH</div>
+                  <div style="font-size:0.7rem;color:#FCA5A5;">Urgent alert</div>
+                </div>
+              </div>
+
+              <div class="feature-list">
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Model comparison: Random Forest, XGBoost, SVM — best performer selected per evaluation</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">SHAP-value explainability: surfaces which metrics most contributed to the risk classification</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Automated FCM push notification to clinician for HIGH and VERY HIGH risk</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text">Personal baseline deviation tracking for longitudinal health surveillance</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--sage)"></div><div class="feature-text"><span class="evidence-label evidence-target" style="font-size:0.65rem;">🎯 Target</span> Accuracy >90% on evaluation dataset; notification latency &lt;30 seconds</div></div>
+              </div>
+              <div class="evidence-label evidence-proposed" style="margin-top: var(--space-5);">🔬 Proposed / Under Development</div>
+            </div>
+            <div class="component-detail-visual">
+              <h5 style="margin-bottom: var(--space-4);">Proposed Data Flow</h5>
+              <div class="pipeline">
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--sage)">1</div><div class="pipeline-step-label">Biometric Inputs<br/><span style="font-size:0.75rem;color:var(--gray-warm);">HR, BP, blood glucose, gestational age + CTG risk from Component 01</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--sage)">2</div><div class="pipeline-step-label">Daily Symptom Questionnaire<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Movement, pain, sleep, swelling, general wellbeing</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--sage)">3</div><div class="pipeline-step-label">Risk Classification Model<br/><span style="font-size:0.75rem;color:var(--gray-warm);">RF/XGBoost/SVM → LOW/MEDIUM/HIGH/VERY HIGH</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--sage)">4</div><div class="pipeline-step-label">SHAP Explanation<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Feature contribution summary surfaced to mother and doctor</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--sage)">5</div><div class="pipeline-step-label">Clinician Alert (HIGH/VERY HIGH)<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Firebase Cloud Messaging push notification to doctor</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Component 03 -->
+          <div class="component-detail" id="component-03" style="border-top: 1px solid var(--gray-border); padding-top: var(--space-10);">
+            <div class="component-detail-text">
+              <div class="component-number" style="color:var(--rose-muted);">COMPONENT 03</div>
+              <h3 style="margin-bottom: var(--space-3);">Bilingual AI Chatbot &amp; Emotional Wellbeing</h3>
+              <div style="margin-bottom: var(--space-3);">
+                <span style="font-size:0.82rem;color:var(--gray-warm);">Researcher: </span>
+                <strong style="font-size:0.9rem;">Livera S.D.</strong>
+                <span style="font-size:0.82rem;color:var(--gray-warm);"> · IT22638168</span>
+              </div>
+              <p>Prenatal emotional wellbeing is a critical but frequently under-addressed dimension of maternal health. This component proposes an AI-powered conversational interface that supports expectant mothers in Sinhala and English — providing an accessible, non-judgmental space for emotional expression and appropriate support responses.</p>
+              <p>The chatbot uses NLP-based sentiment analysis to detect positive, neutral or distressed emotional states from conversation text, and adapts its response tone and content accordingly. Calming music, breathing exercise suggestions, and gentle positive affirmations can be recommended based on inferred context.</p>
+
+              <h4 style="margin-top:var(--space-5); margin-bottom:var(--space-3);">Key Features</h4>
+              <div class="feature-list">
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Sinhala and English bilingual conversation support</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">NLP sentiment analysis driving adaptive response generation</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Calming music recommendations and breathing/relaxation suggestions</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Offline saved chat history accessible without network connection</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Optional on-device facial expression mood context (see ethics note below)</div></div>
+              </div>
+
+              <div class="callout callout--ethics" style="margin-top: var(--space-5);">
+                <strong>Privacy &amp; Ethics (Facial Expression Feature):</strong> The proposed on-device facial expression analysis is a research investigation only. Any implementation requires: (1) explicit user opt-in per session, (2) a visible active-camera indicator during use, (3) one-tap camera disable at any time, (4) on-device-only processing (no frame upload), and (5) clear communication that this provides supplementary mood context — not clinical mental health diagnosis. This feature is proposed; privacy safeguards are design requirements, not yet verified implementation.
+              </div>
+              <div class="evidence-label evidence-proposed" style="margin-top: var(--space-5);">🔬 Proposed / Under Development</div>
+            </div>
+            <div class="component-detail-visual">
+              <h5 style="margin-bottom: var(--space-4);">Wellbeing Support Flow</h5>
+              <div class="pipeline">
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">1</div><div class="pipeline-step-label">User Message (Sinhala / English)<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Text input in preferred language</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">2</div><div class="pipeline-step-label">Sentiment Analysis<br/><span style="font-size:0.75rem;color:var(--gray-warm);">NLP model detects emotional tone: positive / neutral / distressed</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">3</div><div class="pipeline-step-label">Mood Context (Optional, Opt-in)<br/><span style="font-size:0.75rem;color:var(--gray-warm);">On-device facial expression inference supplements text sentiment</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">4</div><div class="pipeline-step-label">Adaptive Response Generation<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Tone and content adapted to inferred emotional state</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">5</div><div class="pipeline-step-label">Support Recommendations<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Calming music / relaxation suggestions / positive affirmations</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Component 04 -->
+          <div class="component-detail" id="component-04" style="border-top: 1px solid var(--gray-border); padding-top: var(--space-10);">
+            <div class="component-detail-text">
+              <div class="component-number" style="color:#3A6440;">COMPONENT 04</div>
+              <h3 style="margin-bottom: var(--space-3);">Multimodal Virtual Nutritionist &amp; GDM Action Engine</h3>
+              <div style="margin-bottom: var(--space-3);">
+                <span style="font-size:0.82rem;color:var(--gray-warm);">Researcher: </span>
+                <strong style="font-size:0.9rem;">Nuwantha P.A.T.</strong>
+                <span style="font-size:0.82rem;color:var(--gray-warm);"> · IT22284716</span>
+              </div>
+              <p>This component proposes a comprehensive AI-driven nutritional support system for expectant mothers, with specific focus on Gestational Diabetes Mellitus (GDM) management and the Sri Lankan dietary context. It addresses the primary barrier to dietary self-monitoring — friction — through three complementary input modalities: voice, camera, and manual entry.</p>
+              <p>A key research novelty is the <em>pre-consumption GDM risk scoring</em> concept: before a mother eats a meal, the system can estimate the glycemic load impact using the identified food items and her current glucose context, offering a proactive rather than reactive approach to dietary management.</p>
+
+              <h4 style="margin-top:var(--space-5); margin-bottom:var(--space-3);">Comprehensive Feature Set</h4>
+              <div class="feature-list">
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Voice-assisted food logging</strong> in Sinhala and English — low-friction natural language input</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Image-based food recognition</strong> using YOLOv8, trained on a Sri Lankan food dataset</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Nutrition label OCR</strong> for packaged/unknown items, auto-populating nutritional data</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Pre-consumption GDM Risk Score</strong> using Glycemic Load + current maternal glucose context</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Nutrient tracking</strong>: iron, calcium, folate — with deficiency-supportive meal ideas</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>"Virtual Chef"</strong>: Gemini API-powered recipe generation from available home ingredients + nutritional goals</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Context-aware hydration nudges</strong> informed by weather data and dietary intake</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Post-meal walking goals</strong> with phone sensor completion tracking (research recommendations, subject to medical clearance)</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Gamification</strong>: health points, achievements, streaks to encourage sustained engagement</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:#5B8A5B"></div><div class="feature-text"><strong>Collaborative food knowledge base</strong> that learns from new product label scans, with verification step</div></div>
+              </div>
+              <div class="evidence-label evidence-proposed" style="margin-top: var(--space-5);">🔬 Proposed / Under Development</div>
+              <div class="callout callout--medical" style="margin-top: var(--space-5);">
+                GDM risk scoring and walking recommendations are research-supported guidance tools, not medical prescriptions. Individual dietary and exercise choices during pregnancy must be made in consultation with a qualified healthcare provider.
+              </div>
+            </div>
+            <div class="component-detail-visual">
+              <h5 style="margin-bottom: var(--space-4);">Multimodal Food Logging Pipeline</h5>
+              <div class="pipeline">
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:#5B8A5B">1</div><div class="pipeline-step-label">Food Input (Multimodal)<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Voice (Sinhala/EN) · Camera photo · Manual entry · Recent items</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:#5B8A5B">2</div><div class="pipeline-step-label">Food Recognition &amp; OCR<br/><span style="font-size:0.75rem;color:var(--gray-warm);">YOLOv8 food detection · Nutrition label OCR for packages</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:#5B8A5B">3</div><div class="pipeline-step-label">Nutritional Analysis<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Calories, macros, iron, calcium, folate — mapped to pregnancy targets</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:#5B8A5B">4</div><div class="pipeline-step-label">GDM Pre-consumption Score<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Glycemic Load + glucose context → suitability risk score</span></div></div>
+                <div class="pipeline-arrow">↓</div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:#5B8A5B">5</div><div class="pipeline-step-label">Personalized Guidance<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Virtual Chef recipes · Hydration nudges · Walking goals · Gamification</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 3: MILESTONES
+    ================================================================ -->
+    <section id="milestones" class="section section--teal" aria-labelledby="milestones-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Milestones</div>
+          <h2 id="milestones-heading">Assessment Timeline</h2>
+          <p class="section-lead">Key academic milestones and evaluation events for the Pregnancy Support System research project. Dates and mark allocations are shown as confirmed or pending.</p>
+        </div>
+
+        <!-- Milestone Filter -->
+        <div class="milestone-filter">
+          <label for="milestone-select">Filter by milestone:</label>
+          <select class="milestone-select" id="milestone-select" aria-label="Select milestone to view">
+            <option value="all">All Milestones</option>
+            <option value="proposal">Project Proposal</option>
+            <option value="pp1">Progress Presentation 1</option>
+            <option value="pp2">Progress Presentation 2</option>
+            <option value="final">Final Assessment</option>
+            <option value="viva">Viva</option>
+          </select>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" id="milestone-list" role="list" aria-live="polite">
+
+          <!-- Proposal -->
+          <div class="timeline-item reveal" data-milestone="proposal" role="listitem">
+            <div class="timeline-dot available" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Project Proposal</h3>
+                <div class="timeline-meta">
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Date: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Marks: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="doc-status status-available">Documents Available</div>
+                </div>
+              </div>
+              <p class="timeline-desc">Formal submission of individual and group research proposals outlining the research problem, objectives, methodology, technology stack and literature review for all four components. Evaluated by the department for academic viability and alignment with research guidelines.</p>
+              <div style="margin-top: var(--space-4); display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                <a href="assets/docs/IT22284716_Nutritionist_Proposal.pdf" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                  📄 Component 04 Proposal (PDF)
+                </a>
+                <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true" title="Other proposals not yet uploaded">Components 01-03 — Pending</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Presentation 1 -->
+          <div class="timeline-item reveal" data-milestone="pp1" role="listitem">
+            <div class="timeline-dot pending" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Progress Presentation 1</h3>
+                <div class="timeline-meta">
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Date: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Marks: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="doc-status status-upcoming">Upcoming</div>
+                </div>
+              </div>
+              <p class="timeline-desc">First formal progress review presenting preliminary literature review findings, data collection status, initial system design decisions, and early model/prototype results per component. Assessed by academic panel with written and oral evaluation components.</p>
+              <div style="margin-top: var(--space-4);">
+                <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Slides — Not yet uploaded</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Presentation 2 -->
+          <div class="timeline-item reveal" data-milestone="pp2" role="listitem">
+            <div class="timeline-dot pending" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Progress Presentation 2</h3>
+                <div class="timeline-meta">
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Date: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Marks: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="doc-status status-upcoming">Upcoming</div>
+                </div>
+              </div>
+              <p class="timeline-desc">Second progress review presenting functional prototype demonstrations, trained model evaluation results, integrated system testing outcomes, and revised documentation. Typically involves live demonstration of working software.</p>
+              <div style="margin-top: var(--space-4);">
+                <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Slides — Not yet uploaded</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Assessment -->
+          <div class="timeline-item reveal" data-milestone="final" role="listitem">
+            <div class="timeline-dot pending" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Final Assessment</h3>
+                <div class="timeline-meta">
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Date: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Marks: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="doc-status status-upcoming">Upcoming</div>
+                </div>
+              </div>
+              <p class="timeline-desc">Comprehensive final assessment of the complete integrated system, individual research contributions, final documentation, and evaluation results. Includes submission of group and individual final reports, source code, and research artifacts.</p>
+              <div style="margin-top: var(--space-4);">
+                <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Final Report — Not yet available</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Viva -->
+          <div class="timeline-item reveal" data-milestone="viva" role="listitem">
+            <div class="timeline-dot pending" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Viva Voce</h3>
+                <div class="timeline-meta">
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Date: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="timeline-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Marks: <strong class="evidence-label evidence-pending" style="font-size:0.68rem;">⚠️ To be confirmed</strong></span>
+                  </div>
+                  <div class="doc-status status-upcoming">Upcoming</div>
+                </div>
+              </div>
+              <p class="timeline-desc">Oral examination where each researcher defends their individual contribution and the group defends the integrated system. Assessed by an independent examination panel. The viva tests depth of understanding, research justification and critical reflection.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="callout callout--info" style="margin-top: var(--space-8);">
+          <strong>📌 Note for the team:</strong> Replace all "To be confirmed" entries with actual assessment dates and mark allocations once officially confirmed by your department. Edit the <code>data-milestone</code> attributes and date/mark text in <code>index.html</code>. See <a href="README.md">README.md</a> for step-by-step instructions.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 4: DOCUMENTS
+    ================================================================ -->
+    <section id="documents" class="section" aria-labelledby="documents-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Documents</div>
+          <h2 id="documents-heading">Research Documentation Library</h2>
+          <p class="section-lead">All project documentation, research proposals, and reports. Items marked as pending will be uploaded as they become available.</p>
+        </div>
+
+        <!-- Group Documents -->
+        <h3 style="margin-bottom: var(--space-5); font-size: 1.1rem;">Group Documents</h3>
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-10);">
+          <div class="doc-card">
+            <div class="doc-icon">📋</div>
+            <div class="doc-info">
+              <div class="doc-title">Group Project Charter</div>
+              <div class="doc-meta">Group Document · R26-IT-146 · All Members</div>
+              <div class="doc-status status-pending">Pending Upload</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon">📚</div>
+            <div class="doc-info">
+              <div class="doc-title">Consolidated Group Research Proposal</div>
+              <div class="doc-meta">Group Document · Full Project Scope · All Members</div>
+              <div class="doc-status status-pending">Pending Upload</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon">✅</div>
+            <div class="doc-info">
+              <div class="doc-title">Project Proposal Checklist</div>
+              <div class="doc-meta">Group Document · Submission Checklist</div>
+              <div class="doc-status status-pending">Pending Upload</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon">📊</div>
+            <div class="doc-info">
+              <div class="doc-title">Final Group Report</div>
+              <div class="doc-meta">Group Document · Final Submission</div>
+              <div class="doc-status status-upcoming">Upcoming</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Individual Research Proposals -->
+        <h3 style="margin-bottom: var(--space-5); font-size: 1.1rem;">Component Research Proposals</h3>
+        <p style="font-size:0.88rem;color:var(--gray-warm);margin-bottom:var(--space-5);">Individual proposals submitted per research component. These are separate research documents from the consolidated group proposal.</p>
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-10);">
+          <div class="doc-card">
+            <div class="doc-icon" style="background: var(--teal-50); color: var(--teal);">📈</div>
+            <div class="doc-info">
+              <div class="doc-title">Component 01: CTG Scan Interpretation Proposal</div>
+              <div class="doc-meta">Thirimanne D.P.B. · IT22272386 · Individual Proposal</div>
+              <div class="doc-status status-pending">Pending Upload</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet uploaded</span>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon" style="background: var(--sage-pale); color: var(--sage-dark);">❤️</div>
+            <div class="doc-info">
+              <div class="doc-title">Component 02: Maternal Health Analytics Proposal</div>
+              <div class="doc-meta">Randinu P.V.K.V. · IT22557506 · Individual Proposal</div>
+              <div class="doc-status status-pending">Pending Upload</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet uploaded</span>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon" style="background: var(--blush-light); color: var(--rose-muted);">💬</div>
+            <div class="doc-info">
+              <div class="doc-title">Component 03: Bilingual Chatbot &amp; Wellbeing Proposal</div>
+              <div class="doc-meta">Livera S.D. · IT22638168 · Individual Proposal</div>
+              <div class="doc-status status-pending">Pending Upload</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet uploaded</span>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon" style="background: #F0FBF0; color: #3A6440;">🥗</div>
+            <div class="doc-info">
+              <div class="doc-title">Component 04: Virtual Nutritionist &amp; GDM Proposal</div>
+              <div class="doc-meta">Nuwantha P.A.T. · IT22284716 · Individual Proposal</div>
+              <div class="doc-status status-available">Available</div>
+            </div>
+            <div class="doc-actions">
+              <a href="assets/docs/IT22284716_Nutritionist_Proposal.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="View Component 04 proposal PDF">View PDF</a>
+              <a href="assets/docs/IT22284716_Nutritionist_Proposal.pdf" class="btn btn-primary btn-sm" download aria-label="Download Component 04 proposal PDF">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Individual Final Reports -->
+        <h3 style="margin-bottom: var(--space-5); font-size: 1.1rem;">Individual Final Reports</h3>
+        <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+          <div class="doc-card">
+            <div class="doc-icon">📝</div>
+            <div class="doc-info">
+              <div class="doc-title">Individual Final Report — IT22272386 (Thirimanne D.P.B.)</div>
+              <div class="doc-meta">Individual Document · Component 01</div>
+              <div class="doc-status status-upcoming">Upcoming</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📝</div>
+            <div class="doc-info">
+              <div class="doc-title">Individual Final Report — IT22557506 (Randinu P.V.K.V.)</div>
+              <div class="doc-meta">Individual Document · Component 02</div>
+              <div class="doc-status status-upcoming">Upcoming</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📝</div>
+            <div class="doc-info">
+              <div class="doc-title">Individual Final Report — IT22638168 (Livera S.D.)</div>
+              <div class="doc-meta">Individual Document · Component 03</div>
+              <div class="doc-status status-upcoming">Upcoming</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📝</div>
+            <div class="doc-info">
+              <div class="doc-title">Individual Final Report — IT22284716 (Nuwantha P.A.T.)</div>
+              <div class="doc-meta">Individual Document · Component 04</div>
+              <div class="doc-status status-upcoming">Upcoming</div>
+            </div>
+            <div class="doc-actions">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Not yet available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 5: PRESENTATIONS
+    ================================================================ -->
+    <section id="presentations" class="section section--alt" aria-labelledby="presentations-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Presentations</div>
+          <h2 id="presentations-heading">Research Presentations</h2>
+          <p class="section-lead">Slide decks from each major academic assessment milestone. Files are linked when available; unavailable entries show honest status.</p>
+        </div>
+
+        <div class="grid grid-2" style="gap: var(--space-6);">
+          <!-- Proposal Presentation -->
+          <div class="card">
+            <div class="card-icon card-icon--teal">🎤</div>
+            <h4>Proposal Presentation</h4>
+            <p style="font-size:0.88rem;color:var(--charcoal-mid);">Initial research concept and methodology presentation to the departmental evaluation panel for project approval.</p>
+            <div class="doc-status status-pending" style="margin-top: var(--space-3);">Pending Upload</div>
+            <div style="margin-top: var(--space-4);">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Slides — Not yet uploaded</span>
+            </div>
+          </div>
+
+          <!-- PP1 -->
+          <div class="card">
+            <div class="card-icon card-icon--sage">🎤</div>
+            <h4>Progress Presentation 1</h4>
+            <p style="font-size:0.88rem;color:var(--charcoal-mid);">Mid-project review of literature findings, system design decisions, and early prototype/model development results.</p>
+            <div class="doc-status status-upcoming" style="margin-top: var(--space-3);">Upcoming</div>
+            <div style="margin-top: var(--space-4);">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Slides — Upcoming</span>
+            </div>
+          </div>
+
+          <!-- PP2 -->
+          <div class="card">
+            <div class="card-icon card-icon--peach">🎤</div>
+            <h4>Progress Presentation 2</h4>
+            <p style="font-size:0.88rem;color:var(--charcoal-mid);">Working prototype demonstration, trained model evaluations, and integrated system testing results.</p>
+            <div class="doc-status status-upcoming" style="margin-top: var(--space-3);">Upcoming</div>
+            <div style="margin-top: var(--space-4);">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Slides — Upcoming</span>
+            </div>
+          </div>
+
+          <!-- Final Presentation -->
+          <div class="card">
+            <div class="card-icon" style="background:#F0FBF0;color:#3A6440;">🎤</div>
+            <h4>Final Presentation</h4>
+            <p style="font-size:0.88rem;color:var(--charcoal-mid);">Complete system demonstration, evaluation findings, research conclusions, and future work recommendations.</p>
+            <div class="doc-status status-upcoming" style="margin-top: var(--space-3);">Upcoming</div>
+            <div style="margin-top: var(--space-4);">
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true">Slides — Upcoming</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout--info" style="margin-top: var(--space-8);">
+          <strong>📌 Adding presentations:</strong> When slides are ready, place the file in <code>assets/slides/</code>, then update the corresponding card's button from disabled to an active link: <code>&lt;a href="assets/slides/your-file.pdf" class="btn btn-secondary btn-sm" target="_blank"&gt;View Slides&lt;/a&gt;</code>.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 6: ABOUT US
+    ================================================================ -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header center">
+          <div class="section-eyebrow">About Us</div>
+          <h2 id="about-heading">The Research Team</h2>
+          <p class="section-lead">Four final-year IT students at SLIIT, each contributing an original research component to the integrated Pregnancy Support System.</p>
+        </div>
+
+        <!-- Supervisor -->
+        <div style="max-width: 600px; margin: 0 auto var(--space-12);">
+          <div class="card" style="display: flex; align-items: center; gap: var(--space-6); background: var(--teal-50); border-color: var(--teal);">
+            <div class="member-avatar avatar-teal" style="flex-shrink: 0; font-size: 1.2rem;">KD</div>
+            <div>
+              <div class="section-eyebrow" style="margin-bottom: var(--space-2);">Research Supervisor</div>
+              <h3 style="font-size: 1.3rem; margin-bottom: var(--space-1);">Dr. Kapila Dissanayake</h3>
+              <p style="font-size: 0.9rem; color: var(--charcoal-mid); margin: 0;">Department of Information Technology<br/>Sri Lanka Institute of Information Technology (SLIIT)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Members -->
+        <div class="grid grid-4 reveal">
+          <!-- Member 1 -->
+          <article class="card member-card" aria-labelledby="member1-name">
+            <div class="member-avatar avatar-teal" aria-hidden="true">DT</div>
+            <h3 class="member-name" id="member1-name">Thirimanne D.P.B.</h3>
+            <div class="member-id">IT22272386</div>
+            <div class="member-role">Component 01</div>
+            <p style="font-size: 0.82rem; color: var(--charcoal-mid); margin-top: var(--space-3);">AI-Assisted CTG Scan Interpretation</p>
+            <div style="margin-top: var(--space-3);">
+              <div class="tag tag--teal">CTG Analysis</div>
+              <div class="tag tag--teal" style="margin-top: var(--space-1);">Image Processing</div>
+            </div>
+            <div class="member-email">Email: <em>⚠️ To be confirmed</em></div>
+          </article>
+
+          <!-- Member 2 -->
+          <article class="card member-card" aria-labelledby="member2-name">
+            <div class="member-avatar avatar-sage" aria-hidden="true">RK</div>
+            <h3 class="member-name" id="member2-name">Randinu P.V.K.V.</h3>
+            <div class="member-id">IT22557506</div>
+            <div class="member-role">Component 02</div>
+            <p style="font-size: 0.82rem; color: var(--charcoal-mid); margin-top: var(--space-3);">AI Maternal Health Analytics &amp; Risk Classification</p>
+            <div style="margin-top: var(--space-3);">
+              <div class="tag tag--sage">Risk Classification</div>
+              <div class="tag tag--sage" style="margin-top: var(--space-1);">Explainable AI</div>
+            </div>
+            <div class="member-email">Email: <em>⚠️ To be confirmed</em></div>
+          </article>
+
+          <!-- Member 3 -->
+          <article class="card member-card" aria-labelledby="member3-name">
+            <div class="member-avatar avatar-peach" aria-hidden="true">SL</div>
+            <h3 class="member-name" id="member3-name">Livera S.D.</h3>
+            <div class="member-id">IT22638168</div>
+            <div class="member-role">Component 03</div>
+            <p style="font-size: 0.82rem; color: var(--charcoal-mid); margin-top: var(--space-3);">Bilingual AI Chatbot &amp; Emotional Wellbeing</p>
+            <div style="margin-top: var(--space-3);">
+              <div class="tag tag--peach">NLP</div>
+              <div class="tag tag--peach" style="margin-top: var(--space-1);">Sinhala / English</div>
+            </div>
+            <div class="member-email">Email: <em>⚠️ To be confirmed</em></div>
+          </article>
+
+          <!-- Member 4 -->
+          <article class="card member-card" aria-labelledby="member4-name">
+            <div class="member-avatar avatar-green" aria-hidden="true">PN</div>
+            <h3 class="member-name" id="member4-name">Nuwantha P.A.T.</h3>
+            <div class="member-id">IT22284716</div>
+            <div class="member-role">Component 04</div>
+            <p style="font-size: 0.82rem; color: var(--charcoal-mid); margin-top: var(--space-3);">Multimodal Virtual Nutritionist &amp; GDM Action Engine</p>
+            <div style="margin-top: var(--space-3);">
+              <div class="tag" style="background:#F0FBF0;color:#3A6440;">YOLOv8</div>
+              <div class="tag" style="background:#F0FBF0;color:#3A6440;margin-top:var(--space-1);">GDM Research</div>
+            </div>
+            <div class="member-email">Email: <em>⚠️ To be confirmed</em></div>
+          </article>
+        </div>
+
+        <div class="callout callout--info" style="margin-top: var(--space-8); max-width: 700px; margin-left: auto; margin-right: auto;">
+          <strong>📌 Team photos &amp; emails:</strong> Replace the initials avatars with genuine team photos by adding <code>&lt;img src="assets/images/member-[id].jpg" alt="Photo of [Name]" class="member-avatar"&gt;</code>. Update contact emails once confirmed. See <a href="README.md">README.md</a> for instructions.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 7: CONTACT
+    ================================================================ -->
+    <section id="contact" class="section section--dark" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header center">
+          <div class="section-eyebrow" style="color: var(--peach-light);">Contact</div>
+          <h2 id="contact-heading" style="color: var(--cream);">Get in Touch</h2>
+          <p class="section-lead" style="color: rgba(250,248,245,0.7);">
+            For inquiries about this research project, please use the contact channels below. Examiner and assessor communications should be directed to the project supervisor.
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="gap: var(--space-8); max-width: 900px; margin: 0 auto;">
+          <!-- Contact Info Card -->
+          <div class="contact-card">
+            <h3 style="margin-bottom: var(--space-6); font-size: 1.1rem;">Project Information</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">🏛️</div>
+              <div>
+                <div class="contact-label">Institution</div>
+                <div class="contact-value">Sri Lanka Institute of Information Technology (SLIIT)<br/>Department of Information Technology</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">📋</div>
+              <div>
+                <div class="contact-label">Project ID</div>
+                <div class="contact-value">R26-IT-146</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">🎓</div>
+              <div>
+                <div class="contact-label">Supervisor</div>
+                <div class="contact-value">Dr. Kapila Dissanayake</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-label">Project Email</div>
+                <div class="contact-value" style="color: var(--gray-warm);">⚠️ Contact details pending confirmation</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">🗓️</div>
+              <div>
+                <div class="contact-label">Academic Year</div>
+                <div class="contact-value">2024–2025 · Final Year Project</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Contacts -->
+          <div class="contact-card">
+            <h3 style="margin-bottom: var(--space-6); font-size: 1.1rem;">Research Team Contacts</h3>
+            <p style="font-size:0.85rem;color:var(--gray-warm);margin-bottom:var(--space-5);">Individual member email addresses will be listed here once confirmed by the team. Do not share personal contact details on public websites without consent.</p>
+
+            <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+              <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--gray-light);border-radius:var(--radius-md);">
+                <div class="member-avatar avatar-teal" style="width:36px;height:36px;font-size:0.7rem;flex-shrink:0;">DT</div>
+                <div>
+                  <div style="font-size:0.88rem;font-weight:600;">Thirimanne D.P.B. · IT22272386</div>
+                  <div style="font-size:0.75rem;color:var(--gray-warm);">⚠️ Email to be confirmed</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--gray-light);border-radius:var(--radius-md);">
+                <div class="member-avatar avatar-sage" style="width:36px;height:36px;font-size:0.7rem;flex-shrink:0;">RK</div>
+                <div>
+                  <div style="font-size:0.88rem;font-weight:600;">Randinu P.V.K.V. · IT22557506</div>
+                  <div style="font-size:0.75rem;color:var(--gray-warm);">⚠️ Email to be confirmed</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--gray-light);border-radius:var(--radius-md);">
+                <div class="member-avatar avatar-peach" style="width:36px;height:36px;font-size:0.7rem;flex-shrink:0;">SL</div>
+                <div>
+                  <div style="font-size:0.88rem;font-weight:600;">Livera S.D. · IT22638168</div>
+                  <div style="font-size:0.75rem;color:var(--gray-warm);">⚠️ Email to be confirmed</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:var(--gray-light);border-radius:var(--radius-md);">
+                <div class="member-avatar avatar-green" style="width:36px;height:36px;font-size:0.7rem;flex-shrink:0;">PN</div>
+                <div>
+                  <div style="font-size:0.88rem;font-weight:600;">Nuwantha P.A.T. · IT22284716</div>
+                  <div style="font-size:0.75rem;color:var(--gray-warm);">⚠️ Email to be confirmed</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-6); padding: var(--space-4); background: rgba(61,122,122,0.08); border-radius: var(--radius-md); border: 1px solid rgba(61,122,122,0.2);">
+              <p style="font-size:0.82rem;color:var(--charcoal-mid);margin:0;">
+                <strong>Note:</strong> A functional contact form requires backend configuration. No server-side email handler is currently configured. To contact the team, please use direct email addresses above once confirmed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32" aria-hidden="true">
+              <circle cx="18" cy="18" r="17" fill="rgba(255,255,255,0.1)"/>
+              <path d="M18 7 C12 7 8 12 8 17.5 C8 22 12 25 15.5 26.5 L18 27.5 L20.5 26.5 C24 25 28 22 28 17.5 C28 12 24 7 18 7Z" fill="#FAF8F5" opacity="0.8"/>
+              <ellipse cx="18" cy="16" rx="4" ry="4.5" fill="#6B8F71"/>
+            </svg>
+            <div>
+              <div class="footer-brand-name">Pregnancy Support System</div>
+              <div class="footer-brand-sub">SLIIT · R26-IT-146</div>
+            </div>
+          </div>
+          <p class="footer-desc">A SLIIT final-year research project investigating AI-assisted prenatal support for expectant mothers and clinicians through four integrated research components.</p>
+          <div class="footer-disclaimer" role="note">
+            This is an academic research prototype. It is not a validated clinical system and does not replace professional medical advice, diagnosis, clinical judgment, or emergency healthcare services.
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <div class="footer-section-title">Navigation</div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#domain">Domain</a>
+            <a href="#milestones">Milestones</a>
+            <a href="#documents">Documents</a>
+            <a href="#presentations">Presentations</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Research -->
+        <div>
+          <div class="footer-section-title">Research</div>
+          <div class="footer-links">
+            <a href="#lit-survey">Literature Survey</a>
+            <a href="#research-gap">Research Gap</a>
+            <a href="#objectives">Objectives</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#component-01">CTG Interpretation</a>
+            <a href="#component-02">Risk Classification</a>
+            <a href="#component-03">Chatbot & Wellbeing</a>
+            <a href="#component-04">Virtual Nutritionist</a>
+          </div>
+        </div>
+
+        <!-- Institution -->
+        <div>
+          <div class="footer-section-title">Institution</div>
+          <div class="footer-links">
+            <a href="#about">Research Team</a>
+            <a href="#contact">Supervisor</a>
+          </div>
+          <div style="margin-top: var(--space-6);">
+            <div class="footer-section-title">Project ID</div>
+            <div style="font-size: 0.9rem; color: rgba(250,248,245,0.6);">R26-IT-146</div>
+          </div>
+          <div style="margin-top: var(--space-4);">
+            <div class="footer-section-title">Academic Year</div>
+            <div style="font-size: 0.9rem; color: rgba(250,248,245,0.6);">2024–2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <span>© 2024–2025 Pregnancy Support System Research Team · SLIIT · Department of Information Technology</span>
+        <span>Academic Research Project · Not a Medical Product</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </a>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

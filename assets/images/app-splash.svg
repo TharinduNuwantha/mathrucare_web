@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <defs>
+    <!-- Background Gradient: Deep sophisticated evergreen with gentle warm radiant center -->
+    <linearGradient id="splashBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18362E" />
+      <stop offset="45%" stop-color="#1E443A" />
+      <stop offset="80%" stop-color="#17352D" />
+      <stop offset="100%" stop-color="#112721" />
+    </linearGradient>
+
+    <!-- Radial aura behind icon -->
+    <radialGradient id="auraGlow" cx="50%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#3A7563" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#2D5D4E" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#18362E" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="peachText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCEEE6" />
+      <stop offset="100%" stop-color="#F2C5B0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Screen Background -->
+  <rect width="390" height="844" fill="url(#splashBg)" />
+
+  <!-- Ambient Light Circle -->
+  <circle cx="195" cy="360" r="180" fill="url(#auraGlow)" />
+
+  <!-- Subtle Top Status Bar Representation (minimal, elegant) -->
+  <g fill="#A3C2B6" opacity="0.6" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="600">
+    <text x="32" y="38" text-anchor="start">9:41</text>
+    <!-- Battery & Signal minimal dots/paths -->
+    <circle cx="340" cy="34" r="3" />
+    <circle cx="348" cy="34" r="3" />
+    <circle cx="356" cy="34" r="3" />
+  </g>
+
+  <!-- Centered Branding Group -->
+  <g transform="translate(195, 335)">
+    <!-- App Icon Emblem (Embedded 100x100) -->
+    <g transform="translate(-50, -100)">
+      <rect width="100" height="100" rx="24" fill="#244E41" stroke="#3D7563" stroke-width="1.5" />
+      <circle cx="50" cy="52" r="32" fill="#2F6353" opacity="0.4" />
+      
+      <!-- Icon Motif -->
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="40" cy="31" r="7.5" fill="#E8A07A" />
+        <path d="M35 39 C28 43 25 53 26 63 C27 71 34 79 45 80 C57 81 67 75 70 65 C72 60 71 55 67 51 C63 46 56 43 52 45 C47 47 45 52 46 57 C47 61 50 63 54 63 C57 63 60 61 60 57" 
+              stroke="#8EB596" stroke-width="3.8" />
+        <path d="M47 58 C47 54 50 51 54 51 C56 51 58 53 58 55 C58 59 52 63 50 66 C48 63 45 60 45 57 C45 54 47 51 50 51"
+              fill="#E8A07A" opacity="0.9" />
+        <path d="M32 67 C36 73 43 75 51 74 C58 72 63 68 65 63" 
+              stroke="#F4D2C1" stroke-width="2" stroke-dasharray="0.5 2.5" opacity="0.7" />
+        <path d="M30 30 C37 23 52 22 62 28 C70 33 75 42 75 52" 
+              stroke="#7EAA87" stroke-width="1.6" opacity="0.5" />
+      </g>
+    </g>
+
+    <!-- Main Title: Serif Editorial Academic Elegance -->
+    <text y="42" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="28" font-weight="600" letter-spacing="0.5">
+      Pregnancy Support
+    </text>
+    <text y="70" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="28" font-weight="600" letter-spacing="0.5">
+      System
+    </text>
+
+    <!-- Minimal Supporting Line -->
+    <text y="104" text-anchor="middle" fill="#B0CABE" font-family="'Inter', sans-serif" font-size="12.5" font-weight="400" letter-spacing="0.6">
+      Intelligent Prenatal Care &amp; Clinical Guidance
+    </text>
+
+    <!-- Subtle Decorative Separator -->
+    <line x1="-36" y1="130" x2="36" y2="130" stroke="#3D7563" stroke-width="1" opacity="0.6" />
+  </g>
+
+  <!-- Bottom Research Attribution -->
+  <g transform="translate(195, 760)" text-anchor="middle" font-family="'Inter', sans-serif">
+    <text y="0" fill="#9CB5AA" font-size="11" font-weight="500" letter-spacing="0.8">
+      SLIIT UNDERGRADUATE RESEARCH
+    </text>
+    <text y="18" fill="#6E8B7F" font-size="10" font-weight="400" letter-spacing="0.5">
+      Research Project R26-IT-146
+    </text>
+  </g>
+
+  <!-- Bottom Home Indicator Bar -->
+  <rect x="125" y="822" width="140" height="4" rx="2" fill="#52786B" opacity="0.7" />
+</svg>
