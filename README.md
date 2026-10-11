@@ -157,7 +157,7 @@ If the team creates or receives an official project logo:
 | index.html | ~95 KB |
 | site.css | ~40 KB |
 | site.js | ~12 KB |
-| hero-editorial.jpg | ~280 KB |
+| hero-editorial.jpg | ~280 KB |git 
 | IT22284716_Nutritionist_Proposal.pdf | ~1.1 MB |
 | **Current Total** | **~1.5 MB** |
 | Remaining for screenshots/docs | **~18.5 MB** |

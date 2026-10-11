@@ -23,8 +23,8 @@
   const PROJECT_DOCUMENTS = [
     {
       id: "doc-ctg-proposal",
-      category: "proposal",
-      categoryLabel: "Research Proposal",
+      category: "c1",
+      categoryLabel: "Component 01",
       title: "AI-Assisted CTG Analysis and Interpretation — Research Proposal",
       contributor: "Thirimanne D.P.B.",
       studentId: "IT22272386",
@@ -39,8 +39,8 @@
     },
     {
       id: "doc-risk-proposal",
-      category: "proposal",
-      categoryLabel: "Research Proposal",
+      category: "c2",
+      categoryLabel: "Component 02",
       title: "Maternal Health Analytics and Risk Classification — Research Proposal",
       contributor: "Randinu P.V.K.V.",
       studentId: "IT22557506",
@@ -55,8 +55,8 @@
     },
     {
       id: "doc-chatbot-proposal",
-      category: "proposal",
-      categoryLabel: "Research Proposal",
+      category: "c3",
+      categoryLabel: "Component 03",
       title: "Bilingual AI Chatbot and Mood Detection — Research Proposal",
       contributor: "Livera S.D.",
       studentId: "IT22638168",
@@ -71,8 +71,8 @@
     },
     {
       id: "doc-nutrition-proposal",
-      category: "proposal",
-      categoryLabel: "Research Proposal",
+      category: "c4",
+      categoryLabel: "Component 04",
       title: "Virtual Nutritionist and GDM Action Engine — Research Proposal",
       contributor: "Nuwantha P.A.T.",
       studentId: "IT22284716",
@@ -84,70 +84,6 @@
       viewUrl: "assets/docs/IT22284716_Nuwantha_Virtual_Nutritionist_Proposal.pdf",
       downloadUrl: "assets/docs/IT22284716_Nuwantha_Virtual_Nutritionist_Proposal.pdf",
       description: "Original research proposal on multimodal food logging, YOLOv8 Sri Lankan food recognition, and pre-consumption GDM glycemic scoring."
-    },
-    {
-      id: "doc-group-charter",
-      category: "group",
-      categoryLabel: "Group Deliverable",
-      title: "Group Project Charter",
-      contributor: "Research Group R26-IT-146",
-      studentId: "All Members",
-      component: "General",
-      status: "pending",
-      statusLabel: "Pending Upload",
-      fileType: "PDF",
-      fileSize: "Pending",
-      viewUrl: null,
-      downloadUrl: null,
-      description: "Formal charter governing team member responsibilities, supervisory review milestones, and quality benchmarks."
-    },
-    {
-      id: "doc-group-proposal",
-      category: "group",
-      categoryLabel: "Group Deliverable",
-      title: "Consolidated Research Proposal",
-      contributor: "Research Group R26-IT-146",
-      studentId: "All Members",
-      component: "General",
-      status: "pending",
-      statusLabel: "Pending Upload",
-      fileType: "PDF",
-      fileSize: "Pending",
-      viewUrl: null,
-      downloadUrl: null,
-      description: "Integrated group proposal uniting the four sub-domains into a single coherent maternal healthcare architecture."
-    },
-    {
-      id: "doc-group-checklist",
-      category: "group",
-      categoryLabel: "Group Deliverable",
-      title: "Project Proposal Submission Checklist",
-      contributor: "Research Group R26-IT-146",
-      studentId: "All Members",
-      component: "General",
-      status: "pending",
-      statusLabel: "Pending Upload",
-      fileType: "PDF",
-      fileSize: "Pending",
-      viewUrl: null,
-      downloadUrl: null,
-      description: "Departmental submission compliance and verification checklist."
-    },
-    {
-      id: "doc-group-final-report",
-      category: "group",
-      categoryLabel: "Group Deliverable",
-      title: "Final Group Research Report",
-      contributor: "Research Group R26-IT-146",
-      studentId: "All Members",
-      component: "General",
-      status: "upcoming",
-      statusLabel: "Upcoming Milestone",
-      fileType: "PDF",
-      fileSize: "Upcoming",
-      viewUrl: null,
-      downloadUrl: null,
-      description: "Comprehensive final academic dissertation documenting system integration, cross-component validation, and research conclusions."
     }
   ];
 
@@ -158,7 +94,7 @@
   // 2. DOCUMENT FILTERING
   // -----------------------------------------------------------------------
   const docFilterButtons = document.querySelectorAll('.doc-filter-btn');
-  const docCards = document.querySelectorAll('.doc-card');
+  const docCards = document.querySelectorAll('#project-documents-list .doc-card');
 
   if (docFilterButtons.length > 0 && docCards.length > 0) {
     docFilterButtons.forEach(function (btn) {
@@ -375,45 +311,7 @@
     }, { passive: true });
   }
 
-  // -----------------------------------------------------------------------
-  // 10. HONEST CONTACT FORM HANDLER (Direct Mailto Composer)
-  // -----------------------------------------------------------------------
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('contact-name') ? document.getElementById('contact-name').value.trim() : '';
-      const email = document.getElementById('contact-email') ? document.getElementById('contact-email').value.trim() : '';
-      const role = document.getElementById('contact-role') ? document.getElementById('contact-role').value : 'Inquirer';
-      const message = document.getElementById('contact-message') ? document.getElementById('contact-message').value.trim() : '';
 
-      if (!name || !message) {
-        alert('Please provide your name and message to compose your inquiry.');
-        return;
-      }
-
-      // Construct mailto link with clear academic subject
-      const subject = encodeURIComponent(`[R26-IT-146 Inquiry] ${role}: ${name}`);
-      const body = encodeURIComponent(
-        `Dear Research Team / Dr. Kapila Dissanayake,\n\n` +
-        `Name: ${name}\n` +
-        `Email: ${email || 'Not provided'}\n` +
-        `Role: ${role}\n\n` +
-        `Message:\n${message}\n\n` +
-        `---\nInquiry generated from SLIIT Pregnancy Support System Research Website (R26-IT-146)`
-      );
-
-      // Direct to supervisor channel / project lead
-      const mailtoUrl = `mailto:kapila.d@sliit.lk?subject=${subject}&body=${body}`;
-      window.location.href = mailtoUrl;
-
-      const notice = document.getElementById('contact-notice');
-      if (notice) {
-        notice.style.display = 'block';
-        notice.innerHTML = `<strong>Email Client Opened:</strong> A draft has been prepared in your email client addressed to Dr. Kapila Dissanayake (Research Supervisor). If your client did not launch automatically, you can email directly at <code>kapila.d@sliit.lk</code> referencing Project R26-IT-146.`;
-      }
-    });
-  }
 
   // -----------------------------------------------------------------------
   // 11. PRINT PREPARATION
