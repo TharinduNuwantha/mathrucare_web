@@ -57,16 +57,18 @@
       </g>
     </g>
 
-    <!-- Main Title: Serif Editorial Academic Elegance -->
-    <text y="42" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="28" font-weight="600" letter-spacing="0.5">
-      Pregnancy Support
-    </text>
-    <text y="70" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="28" font-weight="600" letter-spacing="0.5">
-      System
+    <!-- Main Brand Title: MathruCare -->
+    <text y="50" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="34" font-weight="700" letter-spacing="0.8">
+      MathruCare
     </text>
 
-    <!-- Minimal Supporting Line -->
-    <text y="104" text-anchor="middle" fill="#B0CABE" font-family="'Inter', sans-serif" font-size="12.5" font-weight="400" letter-spacing="0.6">
+    <!-- Subtitle: Pregnancy Support System -->
+    <text y="78" text-anchor="middle" fill="#E8A07A" font-family="'Inter', sans-serif" font-size="12" font-weight="600" letter-spacing="1.2">
+      PREGNANCY SUPPORT SYSTEM
+    </text>
+
+    <!-- Supporting Line -->
+    <text y="104" text-anchor="middle" fill="#B0CABE" font-family="'Inter', sans-serif" font-size="12" font-weight="400" letter-spacing="0.5">
       Intelligent Prenatal Care &amp; Clinical Guidance
     </text>
 
