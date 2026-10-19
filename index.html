@@ -391,7 +391,7 @@
             <div>
               <h3 style="font-size: 1.25rem; margin-bottom: var(--space-3); color: var(--evergreen);">3. Bilingual Affective Computing &amp; Perinatal Mental Health</h3>
               <p style="font-size: 0.92rem; line-height: 1.8; color: var(--charcoal-mid);">
-                Antenatal depression and anxiety affect an estimated 15–20% of expectant mothers in South Asia, yet remain profoundly under-diagnosed due to social stigma and acute shortages of clinical psychologists. Recent advances in cross-lingual representation learning (Conneau et al., 2020) enable conversational agents to understand under-resourced languages such as Sinhala. However, emotional support tools in healthcare must navigate strict ethical boundaries: non-diagnostic affective guidance, localized supportive phrasing, and consent-governed privacy controls.
+                Depression and anxiety during pregnancy are important maternal health concerns, yet emotional distress may go unrecognized because of social stigma and limited access to mental health services. Advances in multilingual language representation learning provide opportunities to develop conversational systems that support languages such as Sinhala and English. This research component integrates bilingual conversational sentiment analysis with facial expression-based mood estimation to support empathetic, culturally sensitive interactions during pregnancy. The system is designed to provide non-diagnostic emotional support, adapt conversational responses to estimated emotional states, and prioritize informed consent, privacy protection, and appropriate referral to professional care when needed.
               </p>
 
               <h3 style="font-size: 1.25rem; margin-bottom: var(--space-3); margin-top: var(--space-6); color: var(--evergreen);">4. Computer Vision in Dietary Healthcare &amp; GDM Management</h3>
@@ -435,7 +435,7 @@
                     <td><strong>Antenatal Emotional Support</strong></td>
                     <td>Infrequent paper questionnaires (e.g. EPDS) administered only during high-risk visits.</td>
                     <td>English-only conversational bots with generic scripted responses.</td>
-                    <td><strong>Bilingual Sinhala-English affective agent</strong> with sentiment analysis, relaxation nudges, and consent-controlled mood context.</td>
+                    <td><strong>Mood-Aware Bilingual Sinhala–English Emotional Support Chatbot</strong> combining conversational sentiment analysis, consent-based facial emotion detection, adaptive supportive conversations, and personalized relaxation music recommendations to support emotional well-being during pregnancy while prioritizing user privacy.</td>
                   </tr>
                   <tr>
                     <td><strong>Prenatal Nutrition &amp; GDM</strong></td>
@@ -536,7 +536,7 @@
             </div>
             <div class="card card--sage">
               <h4 style="color: var(--teal-deep); margin-bottom: var(--space-2);">3. Linguistic &amp; Emotional Isolation</h4>
-              <p style="font-size: 0.88rem; color: var(--charcoal-mid); line-height: 1.7;">Mothers experiencing antenatal stress frequently lack accessible, stigma-free counseling in Sinhala, leaving emotional wellbeing unaddressed throughout critical trimesters.</p>
+              <p style="font-size: 0.88rem; color: var(--charcoal-mid); line-height: 1.7;">Expectant mothers in Sri Lanka may experience antenatal stress without access to affordable, stigma-free emotional support in their preferred language, particularly Sinhala. In addition, facial emotion recognition models may misinterpret expressions among Sri Lankan users because of differences in cultural expression, dataset representation, lighting conditions, camera quality, and facial positioning. These inaccuracies can lead to incorrect mood predictions and inappropriate chatbot responses, highlighting the need for culturally evaluated emotion detection, consent-based camera use, and accessible Sinhala-English conversational support.</p>
             </div>
             <div class="card card--sage">
               <h4 style="color: var(--teal-deep); margin-bottom: var(--space-2);">4. High Friction in Dietary GDM Tracking</h4>
@@ -589,12 +589,13 @@
 
             <div class="card">
               <div class="component-number" style="color: var(--rose-muted);">Component 03 Objectives</div>
-              <h4 style="margin-bottom: var(--space-3);">Bilingual Chatbot &amp; Wellbeing</h4>
+              <h4 style="margin-bottom: var(--space-3);">Bilingual Chatbot &amp; Emotional Wellbeing</h4>
               <ul class="feature-list" style="margin-top: 0;">
-                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Create a bilingual Sinhala-English NLP pipeline tailored to prenatal vocabulary and cultural phrasing.</div></li>
-                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Implement conversational sentiment detection to adapt response tone and offer gentle relaxation exercises.</div></li>
-                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Investigate opt-in, strictly on-device facial expression analysis for supplementary affective context under explicit user consent.</div></li>
-                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><span class="evidence-label evidence-target">🎯 Target</span> System Usability Scale (SUS) rating above 80 among test maternal participant cohorts.</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Develop a bilingual Sinhala–English NLP pipeline adapted to pregnancy-related vocabulary and culturally appropriate communication.</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Implement conversational sentiment detection to adapt chatbot response tone and provide gentle relaxation suggestions.</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Investigate optional, consent-based, on-device facial expression analysis as supplementary emotional context, while acknowledging potential inaccuracies across users, cameras, and environmental conditions.</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Conduct a preliminary usability evaluation with the three users who tested the system to identify usability issues and opportunities for improvement.</div></li>
+                <li class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><span class="evidence-label evidence-target">🎯 Evaluation Goal</span> Assess initial usability and user feedback, with a System Usability Scale (SUS) score above 80 as a target for future evaluation with a larger participant group.</div></li>
               </ul>
             </div>
 
@@ -805,35 +806,38 @@
           <div class="component-detail" id="component-03">
             <div class="component-detail-text">
               <div class="component-number" style="color:var(--rose-muted);">COMPONENT 03</div>
-              <h3 style="margin-bottom: var(--space-2); font-size: 1.4rem;">Bilingual AI Chatbot &amp; Mood Detection</h3>
+              <h3 style="margin-bottom: var(--space-2); font-size: 1.4rem;">Mood-Aware Bilingual Chatbot &amp; Emotional Support System</h3>
               <div style="margin-bottom: var(--space-3); font-size: 0.88rem; color: var(--gray-warm);">
                 Investigator: <strong>Livera S.D.</strong> · Student ID: <code>IT22638168</code>
               </div>
-              <p>Perinatal mental health is severely neglected in developing contexts due to stigma and a deficit of accessible resources. This component explores a bilingual conversational AI supporting expectant mothers in both Sinhala and English with culturally sensitive, non-judgmental guidance.</p>
-              <p>The agent utilizes NLP sentiment analysis on user messages to recognize positive, neutral, or distressed affective states, dynamically tailoring its tone. An experimental on-device facial mood analysis module is explored under strict ethical constraints: affirmative per-session consent, clear camera indicators, local-only execution, and immediate opt-out.</p>
+              <p>Emotional wellbeing during pregnancy is an important aspect of maternal healthcare, yet access to affordable, culturally appropriate, and stigma-free support may be limited. This research component explores a bilingual conversational AI system designed to provide supplementary emotional support to expectant mothers in Sinhala and English.</p>
+              <p>The system uses natural language processing (NLP) to analyse the sentiment of user messages and identify positive, neutral, or distressed language patterns. These estimates can guide the chatbot in generating empathetic, supportive, and context-sensitive responses. An optional facial expression analysis module is investigated as an additional source of emotional context, with attention to informed consent, privacy, and potential inaccuracies across users and camera conditions.</p>
 
+              <h4 style="margin: var(--space-4) 0 var(--space-2);">Key Research Features</h4>
               <div class="feature-list" style="margin-top: var(--space-4);">
-                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Sinhala and English conversational NLP support with localized phrasing.</div></div>
-                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Textual sentiment analysis to modulate conversation warmth and reassurance.</div></div>
-                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Calming music, guided breathing exercises, and positive affirmations.</div></div>
-                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text">Offline-capable chat history stored securely on the local device.</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><strong>Bilingual Conversational Support:</strong> Sinhala and English communication with culturally appropriate phrasing.</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><strong>Text Sentiment Analysis:</strong> Estimates positive, neutral, or distressed sentiment from conversational messages.</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><strong>Adaptive Supportive Responses:</strong> Adjusts conversational tone according to the estimated sentiment.</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><strong>Relaxation Support:</strong> Explores calming music recommendations, guided breathing exercises, and positive affirmations.</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><strong>Optional Facial Emotion Analysis:</strong> Investigates facial expression-based mood estimation, subject to explicit user consent and privacy safeguards.</div></div>
+                <div class="feature-item"><div class="feature-bullet" style="background:var(--peach)"></div><div class="feature-text"><strong>Preliminary User Evaluation:</strong> Uses feedback from three system testers to identify usability issues and areas for improvement.</div></div>
               </div>
               <div style="margin-top: var(--space-4);">
                 <a href="assets/docs/IT22638168_Livera_Bilingual_Chatbot_Proposal.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">View Original Proposal PDF (667 KB)</a>
               </div>
             </div>
             <div class="component-detail-visual">
-              <h5 style="margin-bottom: var(--space-3); font-size: 0.95rem;">Affective Support Processing Flow</h5>
+              <h5 style="margin-bottom: var(--space-3); font-size: 0.95rem;">Effective Support Processing Flow</h5>
               <div class="pipeline">
-                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">1</div><div class="pipeline-step-label">Maternal Message Input<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Natural conversational text in Sinhala or English</span></div></div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">1</div><div class="pipeline-step-label">Maternal Message Input<br/><span style="font-size:0.75rem;color:var(--gray-warm);">The user communicates with the chatbot in Sinhala or English</span></div></div>
                 <div class="pipeline-arrow">↓</div>
-                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">2</div><div class="pipeline-step-label">NLP Sentiment Evaluation<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Classify emotional sentiment: positive / neutral / distressed</span></div></div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">2</div><div class="pipeline-step-label">NLP Sentiment Analysis<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Estimate sentiment expressed in the message as calm, neutral, or distressed</span></div></div>
                 <div class="pipeline-arrow">↓</div>
-                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">3</div><div class="pipeline-step-label">Consent-Governed Mood Context (Optional)<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Strictly on-device facial expression classification (opt-in only)</span></div></div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">3</div><div class="pipeline-step-label">Optional Facial Emotion Analysis<br/><span style="font-size:0.75rem;color:var(--gray-warm);">With explicit user consent, facial expressions may provide supplementary mood context; predictions may be inaccurate and are not clinical assessments</span></div></div>
                 <div class="pipeline-arrow">↓</div>
-                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">4</div><div class="pipeline-step-label">Adaptive Response Synthesis<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Modulate conversational empathy and suggest soothing exercises</span></div></div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">4</div><div class="pipeline-step-label">Adaptive Supportive Response Generation<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Use available conversational context to provide empathetic responses and appropriate relaxation suggestions</span></div></div>
                 <div class="pipeline-arrow">↓</div>
-                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">5</div><div class="pipeline-step-label">Longitudinal Mood Tracking<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Encourage ongoing maternal self-reflection and clinician discussions</span></div></div>
+                <div class="pipeline-step"><div class="pipeline-step-num" style="background:var(--peach)">5</div><div class="pipeline-step-label">Conversation History<br/><span style="font-size:0.75rem;color:var(--gray-warm);">Where supported by implemented storage, users can review previous interactions and reflect on emotional wellbeing; any mood history requires appropriate privacy and retention controls</span></div></div>
               </div>
             </div>
           </div>
