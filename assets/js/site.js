@@ -106,7 +106,8 @@
 
         docCards.forEach(function (card) {
           const category = card.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
+          const documentType = card.getAttribute('data-document-type');
+          if (filter === 'all' || category === filter || documentType === filter) {
             card.style.display = 'flex';
           } else {
             card.style.display = 'none';
