@@ -897,11 +897,39 @@ code {
   font-weight: 700;
   color: var(--white);
 }
+.member-photo {
+  display: block;
+  object-fit: cover;
+  border: 3px solid var(--white);
+  box-shadow: 0 2px 8px rgba(28, 54, 46, 0.16);
+}
 .avatar-teal    { background: linear-gradient(135deg, var(--teal), var(--teal-deep)); }
 .avatar-sage    { background: linear-gradient(135deg, var(--sage), var(--sage-dark)); }
 .avatar-peach   { background: linear-gradient(135deg, var(--peach), var(--rose-muted)); }
 .avatar-green   { background: linear-gradient(135deg, #5B8A5B, #3A6440); }
 
+.supervisor-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  background: var(--teal-50);
+  border: 1px solid #B4D6CE;
+}
+.supervisor-photo {
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  margin: 0;
+}
+.supervisor-details {
+  min-width: 0;
+}
+.supervisor-bio {
+  margin: var(--space-2) 0 0;
+  color: var(--charcoal-mid);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
 .member-name {
   font-family: var(--font-display);
   font-size: 1.2rem;
@@ -919,6 +947,22 @@ code {
   font-size: 0.85rem;
   color: var(--teal);
   font-weight: 500;
+}
+.member-github {
+  display: inline-block;
+  margin-top: var(--space-2);
+  color: var(--teal-deep);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.member-github:hover {
+  text-decoration: underline;
+}
+.member-github:focus-visible {
+  outline: 2px solid var(--teal-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 .member-email {
   font-size: 0.78rem;
@@ -2166,6 +2210,9 @@ code {
   /* Compact Team Cards on Mobile */
   .member-card { padding: var(--space-5) var(--space-4); }
   .member-avatar { width: 68px; height: 68px; font-size: 1.35rem; margin-bottom: var(--space-3); }
+  .supervisor-card { flex-direction: column; align-items: center; gap: var(--space-4); }
+  .supervisor-photo { width: 80px; height: 80px; flex-basis: 80px; }
+  .supervisor-details { text-align: center; }
 
   /* Navbar Logo on Mobile */
   .nav-logo-title { font-size: 0.95rem; }

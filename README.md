@@ -24,21 +24,25 @@ Then open `http://localhost:8080` in your browser.
 
 ## How to Update Key Information
 
-### 1. Add Your Team Photos
+### 1. Update Team Photos
 
-Replace the initials-based avatar with a real photo:
+The team cards use the following profile photos in `assets/images/`:
 
-1. Place your photo in `assets/images/` (e.g., `member-IT22272386.jpg`)
-2. In `index.html`, find the relevant `<div class="member-avatar avatar-teal">DT</div>`
-3. Replace with:
+- `bimsara.jpg` — Thirimanne D.P.B.
+- `randinu.jpg` — Randinu P.V.K.V.
+- `livera.jpg` — Livera S.D.
+- `tharindu.jpg` — Nuwantha P.A.T.
+
+To replace a photo, update the relevant `<img>` in the Research Team section of `index.html`:
 ```html
-<img src="assets/images/member-IT22272386.jpg"
-     alt="Photo of Thirimanne D.P.B."
-     class="member-avatar"
-     style="object-fit: cover;" />
+<img class="member-avatar member-photo"
+     src="assets/images/member-IT22272386.jpg"
+     alt="Thirimanne D.P.B."
+     loading="lazy"
+     decoding="async" />
 ```
 
-Photos should be square, at least 160×160px, compressed to under 100 KB.
+Use a square image of at least 160×160px and compress it to under 300 KB.
 
 ### 2. Update Assessment Dates and Marks
 
