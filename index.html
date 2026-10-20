@@ -379,24 +379,24 @@
             <div>
               <h3 style="font-size: 1.25rem; margin-bottom: var(--space-3); color: var(--evergreen);">1. Cardiotocography (CTG) &amp; Automated Interpretation</h3>
               <p style="font-size: 0.92rem; line-height: 1.8; color: var(--charcoal-mid);">
-                Cardiotocography remains the worldwide clinical benchmark for monitoring fetal heart rate (FHR) and uterine contractions (UC). However, FIGO consensus guidelines (Ayres-de-Campos et al., 2015) consistently emphasize that visual interpretation suffers from pronounced inter-observer and intra-observer variability. While automated feature extraction utilizing machine learning on the CTU-CHB Intrapartum dataset has demonstrated strong diagnostic utility, prior research overwhelmingly presumes access to structured digital time-series files. The challenge of digitizing physical thermal-paper printouts captured via smartphone photography in resource-constrained community settings remains largely under-addressed in peer-reviewed literature.
+                Cardiotocography (CTG) is widely used to monitor fetal heart rate (FHR) and uterine contractions (UC). FIGO consensus guidelines highlight inter-observer and intra-observer variability in visual interpretation [1]. Machine-learning analysis has been studied using digital recordings from the CTU-UHB Intrapartum Cardiotocography Database [2]. Research has also explored digitizing printed CTG traces from smartphone photographs [3] and combining paper-trace digitization with machine-learning-based abnormality detection [4]. Reliable image capture, signal reconstruction, and interpretation under variable real-world conditions remain important challenges, particularly in resource-constrained healthcare environments.
               </p>
 
               <h3 style="font-size: 1.25rem; margin-bottom: var(--space-3); margin-top: var(--space-6); color: var(--evergreen);">2. Multimodal Maternal Risk Modeling &amp; Explainability</h3>
               <p style="font-size: 0.92rem; line-height: 1.8; color: var(--charcoal-mid);">
-                Maternal morbidity prediction models have traditionally relied on discrete physiological measurements such as blood pressure, pulse rate, and blood sugar (Ahmed et al., 2020). While tree-based ensembles (Random Forest, XGBoost) routinely achieve benchmark accuracies between 85% and 92% on public registries, clinical adoption has stalled due to the "black-box" dilemma. Incorporating SHAP (SHapley Additive exPlanations) values is essential to provide obstetrical clinicians with interpretable reasoning for each patient's risk category, establishing clinical trust.
+                Maternal health risk models commonly use physiological measurements such as blood pressure, heart rate, blood sugar, and maternal age. A systematic review describes the potential of machine learning for predicting pregnancy outcomes [5], while ensemble methods have been studied for maternal risk classification [6]. Model complexity can limit transparency; SHAP (SHapley Additive exPlanations) provides feature-level explanations for individual predictions [7]. However, explanations alone do not establish that a model is clinically reliable, so careful validation remains essential [8]. Explainability can contribute to more transparent, clinically informed decision-making when used alongside that validation.
               </p>
             </div>
 
             <div>
               <h3 style="font-size: 1.25rem; margin-bottom: var(--space-3); color: var(--evergreen);">3. Bilingual Affective Computing &amp; Perinatal Mental Health</h3>
               <p style="font-size: 0.92rem; line-height: 1.8; color: var(--charcoal-mid);">
-                Depression and anxiety during pregnancy are important maternal health concerns, yet emotional distress may go unrecognized because of social stigma and limited access to mental health services. Advances in multilingual language representation learning provide opportunities to develop conversational systems that support languages such as Sinhala and English. This research component integrates bilingual conversational sentiment analysis with facial expression-based mood estimation to support empathetic, culturally sensitive interactions during pregnancy. The system is designed to provide non-diagnostic emotional support, adapt conversational responses to estimated emotional states, and prioritize informed consent, privacy protection, and appropriate referral to professional care when needed.
+                Depression and anxiety during pregnancy are important maternal health concerns. The World Health Organization emphasizes integrating culturally sensitive perinatal mental health support into maternal and child health services [9]. Sinhala-English code-mixed sentiment research [10] and multilingual representation learning such as XLM-R [11] offer approaches for bilingual text analysis. Facial expression analysis has also been studied in affective computing, but facial movements alone cannot reliably determine a person's emotional state [12]. This component explores bilingual conversational sentiment analysis and facial-expression-based mood estimation for empathetic interactions. It is intended for non-diagnostic emotional support, with informed consent, privacy protection, and appropriate referral to professional care when needed.
               </p>
 
               <h3 style="font-size: 1.25rem; margin-bottom: var(--space-3); margin-top: var(--space-6); color: var(--evergreen);">4. Computer Vision in Dietary Healthcare &amp; GDM Management</h3>
               <p style="font-size: 0.92rem; line-height: 1.8; color: var(--charcoal-mid);">
-                Gestational Diabetes Mellitus (GDM) necessitates stringent glycemic control to avoid macrosomia and preeclampsia (ADA, 2023). While mobile self-monitoring improves compliance, conventional logging incurs high cognitive friction. Object detection architectures (YOLOv8; Redmon et al.) show outstanding speed in food classification, yet existing models reflect Western diets. A localized Sri Lankan food dataset combined with pre-consumption glycemic load (GL) computation represents a vital research opportunity to proactively guide maternal dietary habits.
+                Gestational Diabetes Mellitus (GDM) requires careful glycemic management to reduce pregnancy-related complications. The American Diabetes Association highlights nutrition, lifestyle modification, and blood glucose monitoring during pregnancy [13]. Computer-vision dietary assessment, including Im2Calories, has explored recognizing food and estimating nutritional information from meal images [14]. Object detectors such as YOLOv8 can support automated food recognition, although performance depends on suitable training data and validation [15]. General-purpose systems may not adequately represent culturally specific Sri Lankan dishes. Research on dietary glycemic index and glycemic load also highlights the relevance of carbohydrate-related dietary factors in GDM [16]. A localized food dataset, portion-aware nutrition analysis, and pre-consumption glycemic-load estimates could support personalized dietary guidance.
               </p>
             </div>
           </div>
@@ -451,15 +451,25 @@
           <!-- Academic References Accordion -->
           <details style="margin-top: var(--space-8);">
             <summary style="cursor:pointer; font-weight:600; color: var(--teal-deep); font-size:0.92rem; padding: var(--space-3) 0; border-top: 1px solid var(--gray-border);">
-              View Selected Scholarly References (from research proposals)
+              View Scholarly References (16)
             </summary>
             <div class="references-list" style="margin-top: var(--space-4);">
-              <div class="reference-item">Ayres-de-Campos, D., Spong, C. Y., &amp; Chandraharan, E. (2015). FIGO consensus guidelines on intrapartum fetal monitoring: Cardiotocography. <em>International Journal of Gynecology &amp; Obstetrics</em>, 131(1), 13–24.</div>
-              <div class="reference-item">Ahmed, M., Kashem, M. A., Rahman, M., &amp; Khatun, S. (2020). Machine Learning-Based Maternal Health Risk Prediction. <em>UCI Machine Learning Repository</em> — Maternal Health Risk Data Set.</div>
-              <div class="reference-item">Redmon, J., &amp; Farhadi, A. (2018). YOLOv3: An Incremental Improvement. <em>arXiv:1804.02767</em>. [Referenced in Component 04 proposal].</div>
-              <div class="reference-item">Conneau, A., Khandelwal, K., Goyal, N., et al. (2020). Unsupervised Cross-lingual Representation Learning at Scale. <em>ACL 2020</em>.</div>
-              <div class="reference-item">World Health Organization. (2016). <em>WHO recommendations on antenatal care for a positive pregnancy experience</em>. Geneva: World Health Organization.</div>
-              <div class="reference-item">American Diabetes Association. (2023). Management of Diabetes in Pregnancy: Standards of Care in Diabetes—2023. <em>Diabetes Care</em>, 46(Suppl. 1), S254–S266.</div>
+              <div class="reference-item"><strong>[1]</strong> D. Ayres-de-Campos, C. Y. Spong, and E. Chandraharan, “FIGO consensus guidelines on intrapartum fetal monitoring: Cardiotocography,” <em>International Journal of Gynecology &amp; Obstetrics</em>, vol. 131, no. 1, pp. 13–24, 2015. <a href="https://doi.org/10.1016/j.ijgo.2015.06.020" target="_blank" rel="noopener noreferrer">doi:10.1016/j.ijgo.2015.06.020</a></div>
+              <div class="reference-item"><strong>[2]</strong> V. Chudáček et al., “Open access intrapartum CTG database,” <em>BMC Pregnancy and Childbirth</em>, vol. 14, art. no. 16, 2014. <a href="https://doi.org/10.1186/1471-2393-14-16" target="_blank" rel="noopener noreferrer">doi:10.1186/1471-2393-14-16</a></div>
+              <div class="reference-item"><strong>[3]</strong> Z. Zhao, Z. Liu, Y. Si, Y. Zhang, and H. Ye, “An effective digitization method for CTG paper report with binary background grids taken by smartphone,” <em>Computer Methods and Programs in Biomedicine</em>, vol. 200, art. no. 105872, 2021. <a href="https://doi.org/10.1016/j.cmpb.2020.105872" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cmpb.2020.105872</a></div>
+              <div class="reference-item"><strong>[4]</strong> S. Öztürk et al., “A Novel Approach for Cardiotocography Paper Digitization and Classification for Abnormality Detection,” <em>IEEE Access</em>, vol. 11, pp. 42521–42533, 2023. <a href="https://doi.org/10.1109/ACCESS.2023.3271137" target="_blank" rel="noopener noreferrer">doi:10.1109/ACCESS.2023.3271137</a></div>
+              <div class="reference-item"><strong>[5]</strong> M. N. Islam, S. N. Mustafina, T. Mahmud, and N. I. Khan, “Machine learning to predict pregnancy outcomes: A systematic review, synthesizing framework and future research agenda,” <em>BMC Pregnancy and Childbirth</em>, vol. 22, art. no. 348, 2022. <a href="https://doi.org/10.1186/s12884-022-04594-2" target="_blank" rel="noopener noreferrer">doi:10.1186/s12884-022-04594-2</a></div>
+              <div class="reference-item"><strong>[6]</strong> A. O. Khadidos, F. Saleem, S. Selvarajan, Z. Ullah, and A. O. Khadidos, “Ensemble machine learning framework for predicting maternal health risk during pregnancy,” <em>Scientific Reports</em>, vol. 14, art. no. 21483, 2024. <a href="https://doi.org/10.1038/s41598-024-71934-x" target="_blank" rel="noopener noreferrer">doi:10.1038/s41598-024-71934-x</a></div>
+              <div class="reference-item"><strong>[7]</strong> S. M. Lundberg and S.-I. Lee, “A Unified Approach to Interpreting Model Predictions,” in <em>Advances in Neural Information Processing Systems</em>, vol. 30, 2017. <a href="https://arxiv.org/abs/1705.07874" target="_blank" rel="noopener noreferrer">arXiv:1705.07874</a></div>
+              <div class="reference-item"><strong>[8]</strong> M. Ghassemi, L. Oakden-Rayner, and A. L. Beam, “The false hope of current approaches to explainable artificial intelligence in health care,” <em>The Lancet Digital Health</em>, vol. 3, no. 11, pp. e745–e750, 2021. <a href="https://doi.org/10.1016/S2589-7500(21)00208-9" target="_blank" rel="noopener noreferrer">doi:10.1016/S2589-7500(21)00208-9</a></div>
+              <div class="reference-item"><strong>[9]</strong> World Health Organization, <em>WHO Guide for Integration of Perinatal Mental Health in Maternal and Child Health Services</em>. Geneva: WHO, 2022. <a href="https://www.who.int/publications/i/item/9789240057142" target="_blank" rel="noopener noreferrer">WHO publication</a></div>
+              <div class="reference-item"><strong>[10]</strong> D. K. Uthpala and S. Thirukumaran, “Sinhala-English Code-Mixed Language Dataset with Sentiment Annotation,” in <em>2024 4th International Conference on Advanced Research in Computing (ICARC)</em>, pp. 184–188, 2024. <a href="https://doi.org/10.1109/ICARC61713.2024.10499746" target="_blank" rel="noopener noreferrer">doi:10.1109/ICARC61713.2024.10499746</a></div>
+              <div class="reference-item"><strong>[11]</strong> A. Conneau et al., “Unsupervised Cross-lingual Representation Learning at Scale,” in <em>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</em>, pp. 8440–8451, 2020. <a href="https://doi.org/10.18653/v1/2020.acl-main.747" target="_blank" rel="noopener noreferrer">doi:10.18653/v1/2020.acl-main.747</a></div>
+              <div class="reference-item"><strong>[12]</strong> L. F. Barrett, R. Adolphs, S. Marsella, A. M. Martinez, and S. D. Pollak, “Emotional Expressions Reconsidered: Challenges to Inferring Emotion From Human Facial Movements,” <em>Psychological Science in the Public Interest</em>, vol. 20, no. 1, pp. 1–68, 2019. <a href="https://doi.org/10.1177/1529100619832930" target="_blank" rel="noopener noreferrer">doi:10.1177/1529100619832930</a></div>
+              <div class="reference-item"><strong>[13]</strong> American Diabetes Association Professional Practice Committee, “15. Management of Diabetes in Pregnancy: Standards of Care in Diabetes—2023,” <em>Diabetes Care</em>, vol. 46, suppl. 1, pp. S254–S266, 2023. <a href="https://doi.org/10.2337/dc23-S015" target="_blank" rel="noopener noreferrer">doi:10.2337/dc23-S015</a></div>
+              <div class="reference-item"><strong>[14]</strong> A. Meyers et al., “Im2Calories: Towards an Automated Mobile Vision Food Diary,” in <em>Proceedings of the IEEE International Conference on Computer Vision (ICCV)</em>, pp. 1233–1241, 2015. <a href="https://openaccess.thecvf.com/content_iccv_2015/html/Meyers_Im2Calories_Towards_an_ICCV_2015_paper.html" target="_blank" rel="noopener noreferrer">Conference paper</a></div>
+              <div class="reference-item"><strong>[15]</strong> G. Jocher, A. Chaurasia, and J. Qiu, <em>Ultralytics YOLOv8</em>, version 8.0.0, 2023. [Software]. <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noopener noreferrer">Ultralytics repository</a></div>
+              <div class="reference-item"><strong>[16]</strong> Y. Zhang et al., “Association of dietary glycemic index and glycemic load with the risk of gestational diabetes mellitus: A systematic review and dose-response meta-analysis,” <em>Gynecological Endocrinology</em>, vol. 40, no. 1, art. no. 2375564, 2024. <a href="https://doi.org/10.1080/09513590.2024.2375564" target="_blank" rel="noopener noreferrer">doi:10.1080/09513590.2024.2375564</a></div>
             </div>
           </details>
         </div>
@@ -1488,7 +1498,7 @@
               <div class="contact-icon" style="background:#EBF5F3;color:var(--teal-deep);">01</div>
               <div>
                 <div class="contact-label">Component 01 — CTG Analysis</div>
-                <div class="contact-value"><strong>Thirimanne D.P.B.</strong> (IT22272386)<br/><a href="mailto:it22272386@my.sliit.lk" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">it22272386@my.sliit.lk</a></div>
+                <div class="contact-value"><strong>Thirimanne D.P.B.</strong> (IT22272386)<br/><a href="mailto:kaneeshasiribaddana@gmail.com" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">kaneeshasiribaddana@gmail.com</a></div>
               </div>
             </div>
 
@@ -1496,7 +1506,7 @@
               <div class="contact-icon" style="background:#F0F6F0;color:var(--sage-dark);">02</div>
               <div>
                 <div class="contact-label">Component 02 — Maternal Health Risk</div>
-                <div class="contact-value"><strong>Randinu P.V.K.V.</strong> (IT22557506)<br/><a href="mailto:it22557506@my.sliit.lk" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">it22557506@my.sliit.lk</a></div>
+                <div class="contact-value"><strong>Randinu P.V.K.V.</strong> (IT22557506)<br/><a href="mailto:vihagakaveesha78@gmail.com" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">vihagakaveesha78@gmail.com</a></div>
               </div>
             </div>
 
@@ -1504,7 +1514,7 @@
               <div class="contact-icon" style="background:#FDF0E8;color:#8B4513;">03</div>
               <div>
                 <div class="contact-label">Component 03 — Bilingual AI Chatbot</div>
-                <div class="contact-value"><strong>Livera S.D.</strong> (IT22638168)<br/><a href="mailto:it22638168@my.sliit.lk" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">it22638168@my.sliit.lk</a></div>
+                <div class="contact-value"><strong>Livera S.D.</strong> (IT22638168)<br/><a href="mailto:salliladimuthu2002@gmail.com" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">salliladimuthu2002@gmail.com</a></div>
               </div>
             </div>
 
@@ -1512,12 +1522,12 @@
               <div class="contact-icon" style="background:#F0FBF0;color:#3A6440;">04</div>
               <div>
                 <div class="contact-label">Component 04 — Virtual Nutritionist</div>
-                <div class="contact-value"><strong>Nuwantha P.A.T.</strong> (IT22284716)<br/><a href="mailto:it22284716@my.sliit.lk" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">it22284716@my.sliit.lk</a></div>
+                <div class="contact-value"><strong>Nuwantha P.A.T.</strong> (IT22284716)<br/><a href="mailto:tharindunuwantha77@gmail.com" style="color:var(--teal-deep);font-size:0.82rem;text-decoration:underline;">tharindunuwantha77@gmail.com</a></div>
               </div>
             </div>
 
             <div style="margin-top: var(--space-6);">
-              <a href="mailto:it22284716@my.sliit.lk?cc=kapila.d@sliit.lk&amp;subject=[R26-IT-146%20Team%20Inquiry]%20Pregnancy%20Support%20System" class="btn btn-secondary btn-sm" style="width:100%;justify-content:center;">
+              <a href="mailto:tharindunuwantha77@gmail.com?cc=kapila.d@sliit.lk&amp;subject=[R26-IT-146%20Team%20Inquiry]%20Pregnancy%20Support%20System" class="btn btn-secondary btn-sm" style="width:100%;justify-content:center;">
                 Email Research Team Channel →
               </a>
             </div>
